@@ -178,42 +178,73 @@
   .two-col{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:start;}
   @media (max-width:860px){.two-col{grid-template-columns:1fr;}}
 
-  /* ---------- EMAIL MOCKUP (case study 1) ---------- */
-  .email-mock{
-    background:#fff;
-    border:1px solid var(--rule);
-    border-radius:6px;
-    overflow:hidden;
+  /* ---------- CAMPAIGN TABS ---------- */
+  .campaign-intro{font-size:16.5px; color:var(--muted); max-width:66ch; margin:18px 0 0;}
+  .tab-row{display:flex; flex-wrap:wrap; gap:10px; margin:32px 0 36px;}
+  .tab-btn{
+    font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.02em;
+    padding:11px 18px; border-radius:20px; border:1px solid var(--ink);
+    background:transparent; color:var(--ink); cursor:pointer;
+  }
+  .tab-btn.active{background:var(--ink); color:var(--paper);}
+
+  .meta-chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}
+  .meta-chip{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.02em;
+    border:1px solid var(--rule); color:var(--muted);
+    padding:6px 12px; border-radius:16px;
+  }
+
+  .view-toggle{display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;}
+  .view-btn{
+    font-family:'JetBrains Mono', monospace; font-size:11.5px;
+    padding:8px 16px; border-radius:16px; border:1px solid var(--ink);
+    background:transparent; color:var(--ink); cursor:pointer;
+  }
+  .view-btn.active{background:var(--ink); color:var(--paper);}
+  .view-link{
+    font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--brick);
+    text-decoration:none; margin-left:auto;
+  }
+  .view-link:hover{text-decoration:underline;}
+
+  .email-frame-wrap{
+    border:1px solid var(--rule); border-radius:8px; overflow:hidden;
     box-shadow:0 24px 60px -30px rgba(20,22,26,0.35);
+    background:#fff;
   }
-  .email-mock .hero-block{
-    background:linear-gradient(180deg, rgba(47,74,61,0.55), rgba(20,30,25,0.85)), repeating-linear-gradient(135deg, #3c5a49, #3c5a49 8px, #35513f 8px, #35513f 16px);
-    height:180px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;
-    padding:20px;
+  .email-frame{width:100%; height:640px; border:0; display:block;}
+
+  .code-view{
+    background:var(--console); color:var(--console-text);
+    font-family:'JetBrains Mono', monospace; font-size:11px; line-height:1.6;
+    padding:20px; border-radius:8px; max-height:640px; overflow:auto;
+    white-space:pre; margin:0;
   }
-  .email-mock .pill{
-    border:1px solid rgba(255,255,255,0.5); color:#f5f4f0;
-    font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase;
-    padding:5px 12px; border-radius:20px;
+
+  /* ---------- COMMS/PR CARD GRID ---------- */
+  .comms-grid{display:flex; flex-wrap:wrap; gap:24px; margin-top:36px;}
+  @media (max-width:860px){.comms-grid{flex-direction:column;}}
+  .comms-card{
+    flex:1 1 280px;
+    background:#fff; border:1px solid var(--rule); border-radius:8px;
+    padding:26px 24px; display:flex; flex-direction:column; gap:12px;
+    box-shadow:0 18px 40px -28px rgba(20,22,26,0.3);
   }
-  .email-mock .fake-h{
-    font-family:'Fraunces', serif; font-style:italic; color:#fff; font-size:20px; text-align:center; margin:0;
+  .comms-label{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--brick);
   }
-  .email-mock .fake-cta{
-    background:#f5f4f0; color:#1a1a1a; font-family:'JetBrains Mono',monospace;
-    font-size:9px; letter-spacing:0.1em; text-transform:uppercase; padding:9px 20px; border-radius:20px; margin-top:4px;
+  .comms-card h4{font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:19px; margin:0; color:var(--ink);}
+  .comms-card p{font-size:14.5px; color:var(--muted); margin:0; line-height:1.6;}
+  .comms-card a.comms-link{
+    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--brick);
+    text-decoration:none; margin-top:auto; padding-top:6px;
   }
-  .email-mock .body-block{padding:26px 30px;}
-  .email-mock .fake-eyebrow{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.14em; color:#8a8a8a; text-transform:uppercase; margin-bottom:8px;}
-  .email-mock .fake-h2{font-family:'Fraunces',serif; font-style:italic; font-size:22px; margin:0 0 10px; color:#1a1a1a;}
-  .email-mock .fake-lines{display:flex; flex-direction:column; gap:6px; margin-top:14px;}
-  .email-mock .fake-line{height:8px; background:#ece7d9; border-radius:2px;}
-  .email-mock .fake-line.w60{width:60%;}
-  .email-mock .fake-line.w80{width:80%;}
-  .email-mock .fake-line.w40{width:40%;}
-  .email-mock .swatch-row{display:flex; gap:8px; padding:0 30px 26px;}
-  .swatch{width:100%; height:64px; border-radius:4px;}
+  .comms-card a.comms-link:hover{text-decoration:underline;}
+  .comms-footnote{font-size:14.5px; color:var(--muted); margin-top:28px;}
+  .comms-footnote a{color:var(--brick); text-decoration:none;}
+  .comms-footnote a:hover{text-decoration:underline;}
 
   .notes-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:18px;}
   .notes-list li{padding-left:22px; position:relative; font-size:15px; color:var(--muted);}
@@ -332,44 +363,82 @@
   </div>
 </section>
 
-<!-- CASE STUDY 1 -->
-<section class="panel light">
+<!-- CASE STUDY 1: EMAIL CAMPAIGNS (tabbed) -->
+<section class="panel light" id="email-work">
   <div class="wrap">
     <div class="case-head">
-      <p class="eyebrow">Case study / Email creative</p>
-      <h3 class="case-title">Designing for what comes after the goal.</h3>
+      <p class="eyebrow">Case study / Email campaigns</p>
+      <h3 class="case-title">A look at how I actually build these.</h3>
+      <p class="campaign-intro">On every send I'm tracking open rate, click rate, and revenue, then using that to shape the next one, subject lines, send times, layout, all of it. Here are a couple of real builds so you can see the actual design and code, not just a mockup.</p>
     </div>
-    <div class="two-col">
-      <div class="case-body">
-        <p>Most post-purchase emails keep talking about the goal a customer already hit, instead of what happens next. For this one, I wanted to shift the tone completely: less "start here," more "protect what you've built."</p>
-        <p>So I leaned into a moodier, editorial look. Muted forest greens, an italic serif headline, a lot more restraint than the bright, high-energy style most supplement brands default to. It felt like a magazine spread more than a typical promo email.</p>
-        <p>I hand-coded the whole template instead of using our drag-and-drop builder, so I could actually control how the hero image, spacing, and type rendered across every inbox.</p>
-        <ul class="notes-list">
-          <li>I handled the creative direction, the copy, and the HTML build myself</li>
-          <li>It ended up becoming the reference template for the rest of the retention series</li>
-        </ul>
-      </div>
-      <div class="email-mock">
-        <div class="hero-block">
-          <span class="pill">After The Goal</span>
-          <p class="fake-h">What happens after<br>you hit your goal?</p>
-          <span class="fake-cta">Shop The Stack</span>
-        </div>
-        <div class="body-block">
-          <p class="fake-eyebrow">The Stack</p>
-          <p class="fake-h2">Stronger By Design</p>
-          <div class="fake-lines">
-            <div class="fake-line w80"></div>
-            <div class="fake-line w60"></div>
+
+    <div class="tab-row">
+      <button class="tab-btn active" data-target="stack">Retention · Muscle Support Stack</button>
+      <button class="tab-btn" data-target="revolution">Education · The Next Wellness Revolution</button>
+    </div>
+
+    <!-- PANEL: MUSCLE SUPPORT STACK -->
+    <div class="campaign-panel" data-panel="stack" style="display:block;">
+      <div class="two-col">
+        <div class="case-body">
+          <div class="meta-chip-row">
+            <span class="meta-chip">Audience: Customers</span>
+            <span class="meta-chip">Goal: Retention</span>
+            <span class="meta-chip">Channel: Email</span>
           </div>
+          <p>Most post-purchase emails keep talking about the goal a customer already hit, instead of what happens next. For this one, I wanted to shift the tone completely: less "start here," more "protect what you've built."</p>
+          <p>So I leaned into a moodier, editorial look. Muted forest greens, an italic serif headline, a lot more restraint than the bright, high-energy style most supplement brands default to. It felt like a magazine spread more than a typical promo email.</p>
+          <p>I hand-coded the whole template instead of using our drag-and-drop builder, so I could actually control how the hero image, spacing, and type rendered across every inbox.</p>
+          <ul class="notes-list">
+            <li>I handled the creative direction, the copy, and the HTML build myself</li>
+            <li>It ended up becoming the reference template for the rest of the retention series</li>
+          </ul>
         </div>
-        <div class="swatch-row">
-          <div class="swatch" style="background:#2f4a3d;"></div>
-          <div class="swatch" style="background:#f5f4f0; border:1px solid #e4ded0;"></div>
-          <div class="swatch" style="background:#1a1a1a;"></div>
+        <div>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="preview" data-for="stack">Preview</button>
+            <button class="view-btn" data-view="code" data-for="stack">Code</button>
+            <a class="view-link" href="emails/muscle-support-stack.html" target="_blank" rel="noopener">Open full email &#8599;</a>
+          </div>
+          <div class="email-frame-wrap" id="frame-wrap-stack">
+            <iframe class="email-frame" id="frame-stack" title="Muscle Support Stack email preview"></iframe>
+          </div>
+          <pre class="code-view" id="code-view-stack" style="display:none;"><code id="code-out-stack"></code></pre>
         </div>
       </div>
     </div>
+
+    <!-- PANEL: WELLNESS REVOLUTION -->
+    <div class="campaign-panel" data-panel="revolution" style="display:none;">
+      <div class="two-col">
+        <div class="case-body">
+          <div class="meta-chip-row">
+            <span class="meta-chip">Audience: Customers</span>
+            <span class="meta-chip">Goal: Education / Awareness</span>
+            <span class="meta-chip">Channel: Email + Video</span>
+          </div>
+          <p>This one sits higher up the funnel. Instead of pushing a specific product hard, it's built around a bigger idea: muscle matters more for healthy aging than most people think, not just weight loss.</p>
+          <p>I built it around a short doctor interview video instead of straight product photography, since the goal was to get people thinking differently before I asked them to buy anything.</p>
+          <p>Same hand-coded approach as the other one, but a completely different mood: darker, more editorial, letting the video thumbnail and headline carry the message instead of a product shot.</p>
+          <ul class="notes-list">
+            <li>I wrote the concept and the copy, and built the template</li>
+            <li>Paired it with a real interview instead of a straight product pitch, a different play than most of our sends</li>
+          </ul>
+        </div>
+        <div>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="preview" data-for="revolution">Preview</button>
+            <button class="view-btn" data-view="code" data-for="revolution">Code</button>
+            <a class="view-link" href="emails/wellness-revolution.html" target="_blank" rel="noopener">Open full email &#8599;</a>
+          </div>
+          <div class="email-frame-wrap" id="frame-wrap-revolution">
+            <iframe class="email-frame" id="frame-revolution" title="The Next Wellness Revolution email preview"></iframe>
+          </div>
+          <pre class="code-view" id="code-view-revolution" style="display:none;"><code id="code-out-revolution"></code></pre>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -414,6 +483,38 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CASE STUDY: COMMUNICATIONS & PR -->
+<section class="panel light">
+  <div class="wrap">
+    <div class="case-head">
+      <p class="eyebrow">Case study / Communications &amp; PR</p>
+      <h3 class="case-title">The parts that happen outside the inbox.</h3>
+      <p class="campaign-intro">Email and social aren't the only channels I work in. Here's a few examples of press, print, and content work.</p>
+    </div>
+    <div class="comms-grid">
+      <div class="comms-card">
+        <span class="comms-label">Press</span>
+        <h4>Pitching our own milestone.</h4>
+        <p>When the company crossed $100M in sales in its first year, I pitched Direct Selling News on the story and got it covered.</p>
+        <a class="comms-link" href="https://www.directsellingnews.com/2025/10/15/make-wellness-surpasses-100-million-in-sales-in-first-year/" target="_blank" rel="noopener">Read the feature &#8599;</a>
+      </div>
+      <div class="comms-card">
+        <span class="comms-label">Print</span>
+        <h4>A guide built for affiliates.</h4>
+        <p>Wrote and designed the MAKE 75 Challenge guide, a 75-day program sent to every affiliate taking part in the challenge.</p>
+        <a class="comms-link" href="make75-challenge-guide.pdf" target="_blank" rel="noopener">View the guide (PDF) &#8599;</a>
+      </div>
+      <div class="comms-card">
+        <span class="comms-label">Podcast</span>
+        <h4>Getting people thinking differently.</h4>
+        <p>Produced and managed a podcast series on how peptides work alongside GLP-1s, aimed at shifting public understanding of the science.</p>
+        <a class="comms-link" href="https://www.youtube.com/playlist?list=PL4VwAr8yUbYJXhACi5I95WzMvtYFUNYl3" target="_blank" rel="noopener">Watch the series &#8599;</a>
+      </div>
+    </div>
+    <p class="comms-footnote">I've also served as the sole photographer at multiple corporate outreach events. <a href="https://baileygowans.mypixieset.com/corporate/" target="_blank" rel="noopener">See the gallery &#8599;</a></p>
   </div>
 </section>
 
@@ -498,6 +599,7 @@
       <a class="btn primary" href="mailto:gowansba@gmail.com">Email me</a>
       <a class="btn ghost" href="resume.pdf" download>Download resume</a>
       <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://baileygowans.mypixieset.com" target="_blank" rel="noopener">Photography</a>
     </div>
     <div class="foot-meta">
       <span>Bailey Gowans, Utah</span>
@@ -559,6 +661,432 @@
     }
     setTimeout(typeNext, 300);
   }
+</script>
+
+
+<script type="text/plain" id="src-stack"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="only light">
+<title>Muscle Support Stack</title>
+<!--[if mso]>
+<style type="text/css">
+table {border-collapse:collapse;border-spacing:0;margin:0;}
+div, td {padding:0;}
+div {margin:0 !important;}
+</style>
+<![endif]-->
+<style type="text/css">
+  /* Progressive enhancement only — not load-bearing for default rendering */
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@0;1&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@300;400;500;700&display=swap');
+
+  @media only screen and (max-width: 620px) {
+    .container { width: 100% !important; max-width: 100% !important; }
+    .mobile-pad { padding-left: 24px !important; padding-right: 24px !important; }
+    .hero-pad { padding: 40px 24px !important; }
+    .headline { font-size: 26px !important; line-height: 32px !important; }
+    .hero-headline { font-size: 28px !important; line-height: 34px !important; }
+    .stack-img { width: 100% !important; max-width: 100% !important; }
+    .btn-table { width: 100% !important; max-width: 260px !important; }
+    .btn-link { width: 100% !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#E8E8E8;">
+<div style="display:none; max-height:0; overflow:hidden; opacity:0; mso-hide:all; font-size:1px; line-height:1px;">
+What happens after you hit your goal? Meet the stack built to protect it.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</div>
+<center style="width:100%; background-color:#E8E8E8;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; background-color:#E8E8E8;">
+<tr>
+<td align="center" style="padding:0;">
+
+<table role="presentation" class="container" width="675" cellpadding="0" cellspacing="0" border="0" style="width:675px; max-width:675px; background-color:#FFFFFF;">
+
+<!-- HEADER -->
+<tr>
+<td align="center" style="padding:26px 32px; background-color:#FFFFFF; border-bottom:1px solid #E8E8E8;">
+<a href="https://makewellness.com/?utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=0" target="_blank" rel="nofollow" style="display:inline-block;">
+<img src="https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6Om1ha2Utd2VsbG5lc3MtcHJpbWFyeS1sb2dvLWJsYWNrLnBuZzo6MjAyNi0wNy0wN1QxNjoxMTowOS40Mjk0MjQ3Njda.png" width="70" alt="MAKE Wellness" style="display:block; width:70px; max-width:70px; height:auto; border:0;">
+</a>
+</td>
+</tr>
+
+<!-- HERO: full-bleed horizontal image, dark overlay, centered text -->
+<tr>
+<td style="background-color:#2F4A3D;">
+<!--[if gte mso 9]>
+<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000; height:460px;">
+<v:fill type="frame" src="https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6OkFzc2V0KzYlNDA0eCsxLnBuZzo6MjAyNi0wNy0wN1QxOTowNzozMC44NzY3MzgxNjVa.png" color="#2F4A3D" />
+<v:textbox inset="0,0,0,0">
+<![endif]-->
+<div style="background-image:url('https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6OkFzc2V0KzYlNDA0eCsxLnBuZzo6MjAyNi0wNy0wN1QxOTowNzozMC44NzY3MzgxNjVa.png'); background-repeat:no-repeat; background-position:center center; background-size:cover; background-color:#2F4A3D;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="hero-pad" align="center" valign="middle" height="460" style="height:460px; padding:56px 50px; background:linear-gradient(180deg, rgba(9,18,12,0.35) 0%, rgba(9,18,12,0.55) 55%, rgba(9,18,12,0.75) 100%);">
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 20px;">
+<tr>
+<td align="center" style="border:1px solid rgba(255,255,255,0.55); border-radius:100px; padding:7px 18px;">
+<span style="font-family:'IBM Plex Mono','Courier New',Courier,monospace; font-size:10px; line-height:14px; font-weight:600; letter-spacing:2.4px; text-transform:uppercase; color:#F5F4F0;">After The Goal</span>
+</td>
+</tr>
+</table>
+
+<h1 class="hero-headline" style="margin:0 0 18px; text-align:center; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:34px; line-height:1.25; color:#FFFFFF;">
+What happens after<br>you hit your goal?
+</h1>
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 20px;">
+<tr>
+<td style="width:36px; height:1px; line-height:1px; font-size:1px; background-color:rgba(255,255,255,0.6);">&nbsp;</td>
+</tr>
+</table>
+
+<p style="margin:0 0 28px; text-align:center; font-family:'Inter',Arial,Helvetica,sans-serif; font-weight:300; font-size:15px; line-height:1.7; color:#F5F4F0;">
+Meet the stack built to protect strength, muscle, and hydration&nbsp;— long after the scale stops moving.*
+</p>
+
+<!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://makewellness.com/MAKEshop/shopping/item?itemId=95&amp;categoryID=33&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=1" style="height:46px;v-text-anchor:middle;width:210px;" arcsize="60%" stroke="f" fillcolor="#F5F4F0">
+<w:anchorlock/>
+<center style="color:#1A1A1A;font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1px;">SHOP THE STACK</center>
+</v:roundrect>
+<![endif]-->
+<!--[if !mso]><!-->
+<a href="https://makewellness.com/MAKEshop/shopping/item?itemId=95&amp;categoryID=33&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=1" target="_blank" rel="nofollow" style="display:inline-block; background-color:#F5F4F0; border-radius:999px; color:#1A1A1A; font-family:'Inter',Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; letter-spacing:1.4px; line-height:46px; text-align:center; text-decoration:none; text-transform:uppercase; padding:0 34px; -webkit-text-size-adjust:none;">
+Shop The Stack
+</a>
+<!--<![endif]-->
+
+</td>
+</tr>
+</table>
+</div>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</td>
+</tr>
+
+<!-- INTRO -->
+<tr>
+<td class="mobile-pad" align="center" style="padding:48px 58px 40px; background-color:#FFFFFF;">
+<p style="margin:0 0 14px; font-family:'IBM Plex Mono','Courier New',Courier,monospace; font-size:10px; line-height:14px; font-weight:600; letter-spacing:2.4px; text-transform:uppercase; color:#6C6C6C;">The Stack</p>
+<h2 class="headline" style="margin:0 0 16px; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:30px; line-height:1.25; color:#1A1A1A;">Stronger By Design</h2>
+<p style="margin:0; font-family:'Inter',Arial,Helvetica,sans-serif; font-weight:300; font-size:15px; line-height:1.7; color:#555555;">
+Designed to support strength, muscle, and hydration during weight loss, maintenance, or simply prioritizing metabolic wellness.*
+</p>
+</td>
+</tr>
+
+<!-- HAIRLINE -->
+<tr>
+<td class="mobile-pad" style="padding:0 58px; background-color:#FFFFFF;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="height:1px; line-height:1px; font-size:1px; background-color:#E8E8E8;">&nbsp;</td></tr></table>
+</td>
+</tr>
+
+<!-- PRODUCT IMAGE -->
+<tr>
+<td class="mobile-pad" align="center" style="padding:40px 58px; background-color:#FFFFFF;">
+<a href="https://makewellness.com/MAKEshop/shopping/item?itemId=95&amp;categoryID=33&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=2" target="_blank" rel="nofollow" style="display:inline-block;">
+<img class="stack-img" src="https://makewellnesshub.com/wp-content/uploads/Screenshot-2026-06-24-at-1.51.43-PM.png" width="430" alt="FIT and HYDRATED Grapefruit" style="display:block; width:430px; max-width:100%; height:auto; border:0; margin:0 auto;">
+</a>
+</td>
+</tr>
+
+<!-- HAIRLINE -->
+<tr>
+<td class="mobile-pad" style="padding:0 58px; background-color:#FFFFFF;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="height:1px; line-height:1px; font-size:1px; background-color:#E8E8E8;">&nbsp;</td></tr></table>
+</td>
+</tr>
+
+<!-- MUSCLE + HYDRATION -->
+<tr>
+<td class="mobile-pad" align="left" style="padding:44px 58px; background-color:#F5F4F0;">
+<p style="margin:0 0 20px; font-family:'IBM Plex Mono','Courier New',Courier,monospace; font-size:10px; line-height:14px; font-weight:600; letter-spacing:2.4px; text-transform:uppercase; color:#6C6C6C;">Muscle + Hydration</p>
+<h3 class="headline" style="margin:0 0 10px; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:24px; line-height:1.3; color:#1A1A1A;">Because muscle drives metabolism.</h3>
+<h3 class="headline" style="margin:0 0 10px; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:24px; line-height:1.3; color:#1A1A1A;">Hydration supports performance.</h3>
+<h3 class="headline" style="margin:0; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:24px; line-height:1.3; color:#1A1A1A;">And long-term results come from protecting both.*</h3>
+</td>
+</tr>
+
+<!-- CLOSING CTA -->
+<tr>
+<td class="mobile-pad" align="center" style="padding:52px 58px; background-color:#2F4A3D;">
+<p style="margin:0 0 26px; font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:26px; line-height:1.35; color:#FFFFFF;">
+Protect what<br>you've built.
+</p>
+
+<!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://makewellness.com/MAKEshop/shopping/item?itemId=95&amp;categoryID=33&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=3" style="height:46px;v-text-anchor:middle;width:210px;" arcsize="60%" stroke="f" fillcolor="#F5F4F0">
+<w:anchorlock/>
+<center style="color:#1A1A1A;font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1px;">SHOP THE STACK</center>
+</v:roundrect>
+<![endif]-->
+<!--[if !mso]><!-->
+<a href="https://makewellness.com/MAKEshop/shopping/item?itemId=95&amp;categoryID=33&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=3" target="_blank" rel="nofollow" style="display:inline-block; background-color:#F5F4F0; border-radius:999px; color:#1A1A1A; font-family:'Inter',Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; letter-spacing:1.4px; line-height:46px; text-align:center; text-decoration:none; text-transform:uppercase; padding:0 34px; -webkit-text-size-adjust:none;">
+Shop The Stack
+</a>
+<!--<![endif]-->
+</td>
+</tr>
+
+<!-- DISCLAIMER -->
+<tr>
+<td class="mobile-pad" align="center" style="padding:28px 58px; background-color:#FFFFFF;">
+<p style="margin:0; font-family:'Inter',Arial,Helvetica,sans-serif; font-weight:300; font-size:11px; line-height:1.6; color:#6C6C6C;">
+*These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.
+</p>
+</td>
+</tr>
+
+<!-- FOOTER -->
+<tr>
+<td class="mobile-pad" align="center" style="padding:36px 24px; background-color:#F5F4F0; border-top:1px solid #E8E8E8;">
+<p style="margin:0 0 8px; font-family:'Inter',Arial,Helvetica,sans-serif; font-weight:300; font-size:11px; line-height:1.6; color:#9A9A9A;">{{companyAddress}}</p>
+<p style="margin:0; font-family:'Inter',Arial,Helvetica,sans-serif; font-weight:300; font-size:11px; line-height:1.6; color:#9A9A9A;">
+<a href="{{unsubscribeLink}}" rel="nofollow" style="color:#9A9A9A; text-decoration:underline;">Unsubscribe</a>&nbsp;·&nbsp;<a href="{{webView}}" rel="nofollow" style="color:#9A9A9A; text-decoration:underline;">View in browser</a>
+</p>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+</center>
+<div class="pixel-wrapper" style="display:none; font-size:1px; color:#333333; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">%SENDGRID_OPEN_TRACKING%</div>
+</body>
+</html>
+</script>
+<script type="text/plain" id="src-revolution"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="only light">
+  <title>The Next Wellness Revolution? Muscle.</title>
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@1&amp;family=IBM+Plex+Mono:wght@500&amp;family=Inter:wght@300;400;700&amp;display=swap');
+  @media only screen and (max-width: 620px) {
+    .m-full { width: 100% !important; max-width: 100% !important; }
+    .m-pad { padding-left: 20px !important; padding-right: 20px !important; }
+    .m-pad-sm { padding-left: 16px !important; padding-right: 16px !important; }
+    .m-headline { font-size: 30px !important; line-height: 36px !important; }
+    .m-headline-sm { font-size: 22px !important; line-height: 28px !important; }
+    .m-img { width: 100% !important; height: auto !important; }
+    .m-stack { display: block !important; width: 100% !important; }
+    .m-hide { display: none !important; }
+  }</style>
+ </head>
+ <body>
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:sans-serif;">
+   The conversation around healthy aging is changing — here’s why muscle matters more than the mirror. &nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​&nbsp;​
+  </div>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#E8E8E8;">
+   <tbody>
+    <tr>
+     <td align="center" style="padding:32px 12px;">
+      <table width="675" cellpadding="0" cellspacing="0" border="0" class="m-full" style="width:675px; max-width:675px; background-color:#FFFFFF;">
+       <tbody>
+        <tr>
+         <td style="padding:0;">
+          <div style="width:100%; height:520px; background-color:#1A1A1A; background-image:url('https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6OkRTQ0Y4OTk1LmpwZzo6MjAyNi0wOC0yNlQxNTo0NjoyNS42OTQxMzM1MzVa.jpg'); background-size:cover; background-position:center center; background-repeat:no-repeat;">
+           <table width="100%" cellpadding="0" cellspacing="0" border="0" style="height:520px; background:linear-gradient(180deg, rgba(20,20,20,0.45) 0%, rgba(20,20,20,0.55) 40%, rgba(20,20,20,0.72) 70%, rgba(20,20,20,0.88) 100%);">
+            <tbody>
+             <tr>
+              <td align="center" valign="top" class="m-pad" style="padding:32px 40px 0 40px;"><a href="https://makewellness.com/?utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=0" rel="nofollow" target="_blank" style="text-decoration:none; border:0;"> <img src="https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6Om1ha2UtbG9nby13aGl0ZS5wbmc6OjIwMjYtMDctMDdUMTY6MTE6NDMuNjA5NDkwMjExWg==.png" width="70" alt="MAKE Wellness" style="display:block; width:70px; height:auto; border:0;"> </a></td>
+             </tr>
+             <tr>
+              <td align="center" valign="bottom" class="m-pad" style="padding:0 40px 44px 40px;">
+               <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                 <tr>
+                  <td align="center" class="m-headline" style="font-family:'Libre Caslon Text',Georgia,'Times New Roman',serif; font-style:italic; font-weight:400; font-size:38px; line-height:1.15; color:#FFFFFF; padding-bottom:16px;">The next wellness revolution?<br>Muscle.</td>
+                 </tr>
+                 <tr>
+                  <td align="center" style="padding-bottom:16px;">
+                   <div style="width:36px; height:1px; background-color:#F5F4F0; margin:0 auto; line-height:1px; font-size:1px;">
+                    &nbsp;
+                   </div></td>
+                 </tr>
+                 <tr>
+                  <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-size:15px; font-weight:300; line-height:1.5; color:#F5F4F0; padding-bottom:28px;">The conversation around healthy aging is changing.</td>
+                 </tr>
+                 <tr>
+                  <td align="center">
+                   <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                     <tr>
+                      <td align="center" style="border-radius:100px; background-color:#F5F4F0;"><a href="https://makewellness.com/products/fit?utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=1" rel="nofollow" target="_blank" style="display:inline-block; padding:16px 34px; font-family:Inter,Arial,Helvetica,sans-serif; font-weight:700; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#1A1A1A; text-decoration:none; border-radius:100px;"> See How FIT Supports Muscle </a></td>
+                     </tr>
+                    </tbody>
+                   </table></td>
+                 </tr>
+                </tbody>
+               </table></td>
+             </tr>
+            </tbody>
+           </table>
+          </div></td>
+        </tr>
+        <tr>
+         <td class="m-pad" align="center" style="background-color:#FFFFFF; padding:52px 60px 0 60px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+           <tbody>
+            <tr>
+             <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-weight:300; font-size:16px; line-height:26px; color:#555555; padding-bottom:20px;">For years, wellness focused on losing weight.</td>
+            </tr>
+            <tr>
+             <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-weight:300; font-size:16px; line-height:26px; color:#555555; padding-bottom:52px;">Now, more attention is being placed on protecting muscle.</td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+        <tr>
+         <td class="m-pad" align="center" style="background-color:#F5F4F0; padding:44px 60px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F5F4F0" style="background-color:#F5F4F0;">
+           <tbody>
+            <tr>
+             <td align="center" bgcolor="#F5F4F0" style="background-color:#F5F4F0; font-family:Inter,Arial,Helvetica,sans-serif; font-style:italic; font-weight:300; font-size:15px; line-height:24px; color:#6C6C6C; padding-bottom:26px;">Take a listen as Dr. Mark and Dr. Alan explain why muscle matters for healthy aging, not just what you see in the mirror.</td>
+            </tr>
+            <tr>
+             <td align="center" bgcolor="#F5F4F0" style="padding:0; background-color:#F5F4F0; line-height:0; font-size:0;"> <a href="https://vimeo.com/1221587438?share=copy&amp;fl=sv&amp;fe=ci&amp;utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=2" rel="nofollow" target="_blank" style="text-decoration:none; border:0; display:block; font-size:0; line-height:0;">
+               <div style="width:300px; height:533px; background-color:#1A1A1A; background-image:url('https://d3ptznaucccg76.cloudfront.net/OTY4Nzc6OnRodW1iLmpwZzo6MjAyNi0wOC0yN1QxNTo1ODowNi4xMDg4OTM3NzNa.jpg'); background-size:cover; background-position:center center; background-repeat:no-repeat; font-size:0; line-height:0;">
+                <table width="300" cellpadding="0" cellspacing="0" border="0" style="width:300px; height:533px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background:linear-gradient(180deg, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0) 20%, rgba(20,20,20,0) 80%, rgba(20,20,20,0.55) 100%);">
+                 <tbody>
+                  <tr>
+                   <td align="center" valign="top" height="46" style="height:46px; padding-top:20px; font-family:'IBM Plex Mono','Courier New',monospace; font-weight:500; font-size:10px; letter-spacing:2.4px; color:#FFFFFF; text-transform:uppercase;">Watch Now</td>
+                  </tr>
+                  <tr>
+                   <td align="center" valign="middle" height="441" style="height:441px;">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                     <tbody>
+                      <tr>
+                       <td align="center" valign="middle" style="width:60px; height:60px; border-radius:50%; background-color:#FFFFFF; font-family:Arial,Helvetica,sans-serif; font-size:18px; color:#1A1A1A; box-shadow:0 2px 10px rgba(0,0,0,0.35);">►</td>
+                      </tr>
+                     </tbody>
+                    </table></td>
+                  </tr>
+                  <tr>
+                   <td height="46" style="height:46px; line-height:1px; font-size:1px;">&nbsp;</td>
+                  </tr>
+                 </tbody>
+                </table>
+               </div> </a></td>
+            </tr>
+            <tr>
+             <td align="center" bgcolor="#F5F4F0" style="background-color:#F5F4F0; padding-top:32px;">
+              <table cellpadding="0" cellspacing="0" border="0">
+               <tbody>
+                <tr>
+                 <td align="center" style="border-radius:100px; background-color:#1A1A1A;"><a href="https://makewellness.com/products/fit?utm_campaign={{message.messageName}}&amp;utm_source=attentive&amp;utm_medium=email&amp;attn_lid=3" rel="nofollow" target="_blank" style="display:inline-block; padding:16px 34px; font-family:Inter,Arial,Helvetica,sans-serif; font-weight:700; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#FFFFFF; text-decoration:none; border-radius:100px;"> See How FIT Supports Muscle </a></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+        <tr>
+         <td class="m-pad-sm" align="center" style="background-color:#FFFFFF; padding:32px 40px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+           <tbody>
+            <tr>
+             <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-weight:300; font-size:11px; line-height:18px; color:#AAAAAA;">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary.</td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+        <tr>
+         <td align="center" style="background-color:#F5F4F0; border-top:1px solid #ECEAE6; padding:36px 24px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+           <tbody>
+            <tr>
+             <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-weight:400; font-size:11px; line-height:18px; color:#9A9A9A; padding-bottom:8px;">{{companyAddress}}</td>
+            </tr>
+            <tr>
+             <td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif; font-weight:400; font-size:11px; line-height:18px; color:#9A9A9A;"><a rel="nofollow" style="color:#9A9A9A; text-decoration:underline;" href="{{unsubscribeLink}}">Unsubscribe</a>&nbsp;·&nbsp;<a rel="nofollow" style="color:#9A9A9A; text-decoration:underline;" href="{{webView}}">View in browser</a></td>
+            </tr>
+           </tbody>
+          </table></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table>
+ <div class="pixel-wrapper" style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">%SENDGRID_OPEN_TRACKING%</div></body>
+</html>
+</script>
+
+<script>
+  // Populate live email previews via srcdoc (self-contained, no external fetch needed)
+  function loadFrame(frameId, srcId){
+    const frame = document.getElementById(frameId);
+    const src = document.getElementById(srcId);
+    if (frame && src){
+      frame.srcdoc = src.textContent;
+    }
+  }
+  loadFrame('frame-stack', 'src-stack');
+  loadFrame('frame-revolution', 'src-revolution');
+
+  function escapeHtml(str){
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // Tab switching between campaigns
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.campaign-panel').forEach(panel => {
+        panel.style.display = (panel.getAttribute('data-panel') === target) ? 'block' : 'none';
+      });
+    });
+  });
+
+  // Preview / Code toggle per campaign
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const forId = btn.getAttribute('data-for');
+      const view = btn.getAttribute('data-view');
+      document.querySelectorAll(`.view-btn[data-for="${forId}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const frameWrap = document.getElementById('frame-wrap-' + forId);
+      const codeView = document.getElementById('code-view-' + forId);
+
+      if (view === 'code'){
+        frameWrap.style.display = 'none';
+        codeView.style.display = 'block';
+        const codeOut = document.getElementById('code-out-' + forId);
+        if (codeOut && !codeOut.dataset.loaded){
+          const srcEl = document.getElementById('src-' + forId);
+          codeOut.textContent = srcEl.textContent;
+          codeOut.dataset.loaded = 'true';
+        }
+      } else {
+        frameWrap.style.display = 'block';
+        codeView.style.display = 'none';
+      }
+    });
+  });
 </script>
 
 </body>
