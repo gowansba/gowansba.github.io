@@ -298,9 +298,49 @@
   footer .cta-row{margin-bottom:80px;}
   footer .btn.line:hover{background:rgba(255,255,255,0.35);}
   .foot-meta{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-weight:500; font-size:15.5px; border-top:1px solid rgba(34,56,75,0.25); padding-top:22px;}
+
+  /* ---------- Scannable layout ---------- */
+  .context{font-size:18px; color:var(--muted); margin:-6px 0 34px; max-width:60ch;}
+  .deep .context{color:var(--mist);}
+  .per{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:0 0 40px;}
+  @media (max-width:860px){ .per{grid-template-columns:1fr;} }
+  .per > div{background:var(--mist); border-radius:24px; padding:26px 26px 28px;}
+  .band.mist .per > div{background:var(--white);}
+  .band.deep .per > div{background:rgba(234,242,247,0.1);}
+  .per h3{font-size:19px; margin:0 0 8px;}
+  .per p{margin:0; font-size:17px; line-height:1.5;}
+  .band.deep .per h3{color:var(--sun);}
+  .band.deep .per p{color:var(--mist);}
+  .per > div.result, .band.mist .per > div.result, .band.deep .per > div.result{background:var(--sun);}
+  .per .result h3, .band.deep .per .result h3{color:var(--ink);}
+  .per .result p, .band.deep .per .result p{font-family:var(--serif); font-size:22px; line-height:1.3; color:var(--ink);}
+  h3.sub + .per{margin-top:4px;}
+  .kit{margin-top:0;}
+  .note{margin:0 0 22px; color:var(--muted);}
+  .sms .note{margin-top:16px;}
+  .shots img{display:block; width:100%; height:auto; border-radius:18px; background:var(--white);}
+  .caption{font-size:15px; color:var(--muted); margin:12px 0 0;}
+  .program-visual{display:grid; grid-template-columns:minmax(0,520px) 1fr; gap:48px; align-items:center;}
+  @media (max-width:760px){ .program-visual{grid-template-columns:1fr; gap:28px;} }
+  .program-visual .winner{margin:0;}
+  .mini-program{
+    margin-top:72px; background:var(--mist); border-radius:28px; padding:32px 36px;
+    display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;
+  }
+  .mini-program h3.sub{margin:0 0 6px;}
+  .mini-program p{margin:0; color:var(--muted); max-width:52ch;}
+  .email-layout{display:grid; grid-template-columns:280px 1fr; gap:48px; align-items:start;}
+  @media (max-width:860px){ .email-layout{grid-template-columns:1fr; gap:22px;} }
+  .email-side .ticks{margin-top:10px;}
+  .band.deep .compare{margin-top:8px;}
+  .compare iframe{height:440px;}
+  .compare figcaption{font-size:20px;}
+  @media (min-width:861px){ .compare{grid-template-columns:1fr 1fr; max-width:900px;} }
 </style>
 </head>
 <body>
+
+
 
 <header class="site">
   <div class="nav-inner">
@@ -342,16 +382,16 @@
     </div>
     <div class="hero-grid">
       <div>
-        <p class="intro"><strong>I make complicated science easy to love.</strong> I lead communications at MAKE Wellness, turning R&amp;D findings and founder vision into launches, press, community programs, and emails, plus the systems that keep it all on brand and on time.</p>
+        <p class="intro"><strong>I make complicated science easy to love.</strong> Head of Communications at MAKE Wellness: launches, press, community programs, and email.</p>
         <div class="cta-row">
           <a class="btn sun" href="#launch">See the work</a>
           <a class="btn line" href="resume.pdf" download>Download resume</a>
         </div>
       </div>
       <ul class="work-list" aria-label="Case studies">
-        <li><a href="#launch">Precision Skincare launch <span>Product launch</span></a></li>
-        <li><a href="#governance">Brand governance <span>Claims and standards</span></a></li>
-        <li><a href="#pr">PR and founder voice <span>Press, podcast</span></a></li>
+        <li><a href="#launch">Precision Skincare launch <span>Sold out in 6 hours</span></a></li>
+        <li><a href="#governance">Brand governance <span>50+ creators</span></a></li>
+        <li><a href="#pr">PR and founder voice <span>National press</span></a></li>
         <li><a href="#community">Community programs <span>10,000+ sign-ups</span></a></li>
         <li><a href="#email-work">Emails <span>Design and code</span></a></li>
         <li><a href="#systems">Systems and AI <span>10+ sends a week</span></a></li>
@@ -364,37 +404,19 @@
 <section class="band white" id="launch">
   <div class="wrap">
     <h2 class="title">Taking a supplement brand into skincare.</h2>
-    <p class="lede">In January 2026, R&amp;D handed us an entirely new category: Precision Skincare, a three-product Skin Renewal System. My job was to turn their formulation science into language customers and affiliates would respond to, then carry that one message across every channel by launch day in September.</p>
-
-    <dl class="facts">
-      <div><dt>Timeline</dt><dd>January to September 2026</dd></div>
-      <div><dt>Audience</dt><dd>Adults 30 and up who want firmer, smoother, more resilient-looking skin, plus the affiliates who share it</dd></div>
-      <div><dt>My role</dt><dd>Messaging, copy, and the channel rollout, from R&amp;D materials to launch day</dd></div>
-      <div class="result"><dt>Result</dt><dd>Sold out within 6 hours. Our fastest launch build to date.</dd></div>
-    </dl>
-
-    <div class="two-col">
-      <div class="prose">
-        <p>The hardest part wasn't writing copy. It was translation. R&amp;D's materials were written for scientists. Customers needed to understand each product in a single sentence, and affiliates needed a story they could retell in their own words.</p>
-        <p>I anchored everything on the SPA Method&trade; (Signal. Preserve. Amplify.) so every touchpoint told the same story, then gave each product exactly one benefit line, written to stay inside our claims guidelines.</p>
-        <p>On launch day, the email, SMS, affiliate HUB post, and landing page all went live on that same framework. The follow-up email used real inventory to create urgency instead of inventing scarcity.</p>
-      </div>
-      <div class="timeline">
-        <div class="tl-item"><p class="tl-date">January 2026</p><p class="tl-text"><b>R&amp;D handoff.</b> Formulation materials become customer and affiliate messaging.</p></div>
-        <div class="tl-item"><p class="tl-date">Summit</p><p class="tl-text"><b>First preview.</b> Affiliates see the line early and start building anticipation.</p></div>
-        <div class="tl-item"><p class="tl-date">Launch day, September</p><p class="tl-text"><b>Every channel at once.</b> Email at 10am MT, SMS, the HUB post, and the landing page go live together.</p></div>
-        <div class="tl-item"><p class="tl-date">Within 6 hours</p><p class="tl-text"><b>Sold out.</b> The fastest launch build we've done.</p></div>
-      </div>
+    <p class="context">January to September 2026. For adults 30+ and the affiliates who sell to them.</p>
+    <div class="per">
+      <div><h3>Problem</h3><p>R&amp;D's science was written for scientists. Customers needed it in one sentence.</p></div>
+      <div><h3>Execution</h3><p>One story across every channel, the SPA Method&trade;, with one compliant line per product.</p></div>
+      <div class="result"><h3>Result</h3><p>Sold out within 6 hours. Our fastest launch build yet.</p></div>
     </div>
 
     <div class="kit">
-      <h3 class="sub">The launch, channel by channel</h3>
-      <p>Same story, shaped for where each audience would see it.</p>
       <div class="tab-row" role="tablist" aria-label="Launch channels">
         <button class="tab-btn active" role="tab" aria-selected="true" data-group="kit" data-target="sms">SMS</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="hub">Affiliate HUB post</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="landing">Landing page</button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="emails">Launch emails</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="emails">Emails</button>
       </div>
 
       <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="sms">
@@ -409,32 +431,31 @@
           </div>
           <div>
             <p class="pull">Three products. One Skin Renewal System.</p>
-            <p class="panel-note" style="margin-top:20px;">A text has a few seconds to land. I led with the framework, named the category, and closed on the one reason to act now. The same GIF anchors the launch email, so the two channels read as one moment.</p>
+            <p class="note">Framework, category, reason to act. Same GIF as the launch email.</p>
           </div>
         </div>
       </div>
 
       <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="hub" hidden>
-        <p class="panel-note">Affiliates needed more than customers did: pricing, launch gifts, the video, and downloadable product flyers they could share. The HUB post put all of it in one place, written so they could pick it up and use it that day. <a class="link" href="https://makewellnesshub.com/precision-skincare-is-here/" target="_blank" rel="noopener">Read the live post</a></p>
+        <p class="note">Everything affiliates needed to share it that day. <a class="link" href="https://makewellnesshub.com/precision-skincare-is-here/" target="_blank" rel="noopener">See the live post</a></p>
         <div class="shots">
-          <figure class="shot"><img src="images/hub-post-top.jpg" loading="lazy" alt="HUB post opening: Precision Skincare is here, with a shop button and campaign photo"><figcaption>The opening ties the launch to the Summit preview affiliates already saw.</figcaption></figure>
-          <figure class="shot"><img src="images/hub-post-pricing.jpg" loading="lazy" alt="HUB post pricing panel with Stack price, subscribe price, and launch gifts"><figcaption>Pricing and launch gifts, laid out so affiliates can quote them accurately.</figcaption></figure>
+          <img src="images/hub-post-top.jpg" loading="lazy" alt="HUB post opening: Precision Skincare is here, with a shop button and campaign photo">
+          <img src="images/hub-post-pricing.jpg" loading="lazy" alt="HUB post pricing panel with Stack price, subscribe price, and launch gifts">
         </div>
       </div>
 
       <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="landing" hidden>
-        <p class="panel-note">The landing page is where new customers arrive cold. It leads with the category, then walks through the SPA Method&trade;, each product, and the science, with every claim footnoted and disclaimed. <a class="link" href="https://meet.makewellness.com/precision-skincare" target="_blank" rel="noopener">Visit the live page</a></p>
+        <p class="note">Built for cold traffic: what it is, how it works, every claim footnoted. <a class="link" href="https://meet.makewellness.com/precision-skincare" target="_blank" rel="noopener">Visit the page</a></p>
         <div class="shots">
-          <figure class="shot"><img src="images/landing-hero.jpg" loading="lazy" alt="Landing page hero: Precision Skincare by MAKE Wellness, Get the Stack"><figcaption>The hero states what it is and who it's for before asking for anything.</figcaption></figure>
-          <figure class="shot"><img src="images/landing-spa-method.jpg" loading="lazy" alt="Landing page section: Powered by the SPA Method, Signal. Preserve. Amplify."><figcaption>The SPA Method&trade; carries through from the email and SMS word for word.</figcaption></figure>
+          <img src="images/landing-hero.jpg" loading="lazy" alt="Landing page hero: Precision Skincare by MAKE Wellness, Get the Stack">
+          <img src="images/landing-spa-method.jpg" loading="lazy" alt="Landing page section: Powered by the SPA Method, Signal. Preserve. Amplify.">
         </div>
       </div>
 
       <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="emails" hidden>
-        <p class="panel-note">Two sends bracketed launch week: one to introduce the line, and one to follow up when launch gifts started running out. Both are in the email section with full code.</p>
         <div class="email-cards">
-          <a class="email-card" href="#email-work" data-open-tab="email:launch"><b>Launch day</b><span>Introduces the system, the SPA Method&trade;, and one line per product.</span></a>
-          <a class="email-card" href="#email-work" data-open-tab="email:running-low"><b>Launch follow-up</b><span>Honest urgency, built from real launch-gift inventory.</span></a>
+          <a class="email-card" href="#email-work" data-open-tab="email:launch"><b>Launch day</b><span>The system in one scroll.</span></a>
+          <a class="email-card" href="#email-work" data-open-tab="email:running-low"><b>Gifts running low</b><span>Urgency from real inventory.</span></a>
         </div>
       </div>
     </div>
@@ -444,67 +465,49 @@
 <!-- ================= GOVERNANCE ================= -->
 <section class="band mist" id="governance">
   <div class="wrap">
-    <h2 class="title">Keeping 50+ creators on brand and inside the claims.</h2>
-    <p class="lede">In supplements and skincare, one overpromising sentence can turn into a legal problem. Our compliance team keeps a deep library of claims guidance, but a library doesn't help an affiliate writing a caption at 9pm. So I built tools that bring the rules to where the writing happens.</p>
-
-    <div class="gov-grid">
-      <div class="gov-card feature">
-        <h3 class="sub">A claims checker that reads like compliance does.</h3>
-        <p>I compiled our compliance documents into a ChatGPT project that reviews copy against them automatically. Paste in a caption, email, or flyer draft, and it flags risky language and suggests compliant rewrites. I run every send through it, and it backs up the claims framework our creators and affiliates follow.</p>
-        <p style="margin:0;">The guidance itself stays internal. What's shareable is the result: copy that's safe before it ever reaches legal.</p>
-      </div>
-      <div class="gov-card">
-        <h3 class="sub">One design standard for every send.</h3>
-        <p>A single written reference covering layout, type, color, button construction, and the build rules that keep emails rendering in Gmail and Outlook. It's why ten sends a week still look like one brand. A few of the rules:</p>
-        <ul class="rule-list">
-          <li><span>Type</span>Serif headlines, sans body, fallback fonts written inline on every element.</li>
-          <li><span>Color</span>Neutral base. Green is an accent only, never a full background.</li>
-          <li><span>Buttons</span>Pill-shaped, dark or light only, with an Outlook fallback so corners survive.</li>
-          <li><span>Build</span>Every style inlined. Tables for layout. Letter-spacing in pixels.</li>
-          <li><span>Compliance</span>FDA disclaimer on every product send.</li>
-        </ul>
-      </div>
+    <h2 class="title">Keeping 50+ creators inside the claims.</h2>
+    <div class="per">
+      <div><h3>Problem</h3><p>One overpromising sentence can become a legal problem.</p></div>
+      <div><h3>Execution</h3><p>Turned our compliance library into a ChatGPT claims checker, and wrote one design standard for every send.</p></div>
+      <div class="result"><h3>Result</h3><p>Copy that's safe before it reaches legal, and a brand that looks the same everywhere.</p></div>
     </div>
-
     <div class="rewrite">
       <div class="no"><h4>Before</h4><p>renewed reverses aging and clears up your skin in 4 weeks.</p></div>
       <div class="yes"><h4>After</h4><p>renewed provides daily skin renewal support you sip, powered by Bioactive Precision Peptides&trade;.*</p></div>
     </div>
-    <p class="rewrite-cap">An illustrative rewrite, not a real incident. The "after" line is the approved copy from the launch email.</p>
+    <p class="caption">Illustrative example. The "after" is the approved launch copy.</p>
   </div>
 </section>
 
 <!-- ================= PR ================= -->
 <section class="band sky-band" id="pr">
   <div class="wrap">
-    <h2 class="title">Speaking for the company, and for its founder.</h2>
-    <p class="lede">Outward-facing communication is where a young brand earns trust. Here's the press I secured, the founder voice I write in, the podcast I help steer, and a local partnership I proposed.</p>
+    <h2 class="title">Speaking for the company, and its founder.</h2>
     <div class="pr-grid">
       <div class="pr-item press">
         <span class="kind">Press</span>
-        <h3>$100M in year one, and I got it into Direct Selling News.</h3>
-        <p>When the company crossed $100M in sales in its first year, I pitched the story and landed the feature.</p>
+        <h3>$100M in year one, featured in Direct Selling News.</h3>
+        <p>I pitched it and landed it.</p>
         <a class="link" href="https://www.directsellingnews.com/2025/10/15/make-wellness-surpasses-100-million-in-sales-in-first-year/" target="_blank" rel="noopener">Read the feature</a>
       </div>
-      <div class="pr-item plain">
+      <div class="pr-item">
         <span class="kind">Founder voice</span>
         <h3>Writing as Justin Prince.</h3>
-        <p>The MAKE 75 and F.I.T. Family challenges were Justin Prince's programs, so every guide, rule set, and announcement was written in his voice. When he announced the F.I.T. Family winners on camera, he held winner cards I designed.</p>
+        <p>Guides, rules, and announcements for his two challenges.</p>
         <a class="link" href="#community">See the programs</a>
       </div>
-      <div class="pr-item plain">
+      <div class="pr-item">
         <span class="kind">Podcast</span>
-        <h3>Steering the conversation.</h3>
-        <p>For our series on peptide science and GLP-1 trends, I plan episode topics and handle everything outward-facing: positioning, promotion, and how each episode reaches our audience.</p>
+        <h3>Peptide science, made listenable.</h3>
+        <p>I plan the topics and run the outward-facing comms.</p>
         <a class="link" href="https://www.youtube.com/playlist?list=PL4VwAr8yUbYJXhACi5I95WzMvtYFUNYl3" target="_blank" rel="noopener">Watch the series</a>
       </div>
     </div>
     <div class="pr-item proposal" style="margin-top:20px;">
       <span class="kind">Proposal, in progress</span>
-      <h3>Showing up in our own backyard.</h3>
-      <p>I proposed booths at local universities, starting with Utah Valley University, plus a sponsorship of UVU athletics. Established Utah wellness brands have built real loyalty through university partnerships, and I want MAKE competing for that same local attention.</p>
+      <h3>UVU booths and athletics sponsorship, to win local attention.</h3>
     </div>
-    <p class="pr-foot">I've also served as the sole photographer at multiple corporate outreach events. <a class="link" href="https://baileygowans.mypixieset.com/corporate/" target="_blank" rel="noopener">See the gallery</a></p>
+    <p class="pr-foot">Also: sole photographer at corporate outreach events. <a class="link" href="https://baileygowans.mypixieset.com/corporate/" target="_blank" rel="noopener">See the gallery</a></p>
   </div>
 </section>
 
@@ -512,56 +515,29 @@
 <section class="band white" id="community">
   <div class="wrap">
     <h2 class="title">Programs people come back to every day.</h2>
-
-    <div class="program">
-      <div class="two-col">
-        <div class="prose">
-          <h3 class="sub">The F.I.T. Family Challenge</h3>
-          <p>This was Justin Prince's challenge, and it took a while to get approved. Legal had a lot of notes. The goal: get families moving together and posting every day for eight weeks straight, not just for one giveaway post.</p>
-          <p>I built it around three simple daily actions: move together, fuel well, track it. I designed the full guide, a printable goal sheet, and a two-month tracking calendar, so people had something to stick on the fridge instead of something to scroll past.</p>
-          <p class="big-stat">More than 10,000 people signed up.</p>
-          <p>Weekly prize drawings kept it fun in the short term, and a running entry count built toward a grand prize trip, so people had a reason to keep showing up in week six, not just week one.</p>
-          <ul class="ticks">
-            <li>I designed the campaign mechanics and every creative asset: the guide, the tracker, the social rules, and the winner cards</li>
-            <li>Ran across Instagram, Facebook, and our owned email and SMS lists</li>
-          </ul>
-          <div class="cta-row" style="margin-top:30px;">
-            <a class="btn ink" href="fit-family-challenge.pdf" target="_blank" rel="noopener">View the full guide (PDF)</a>
-          </div>
-        </div>
-        <div>
-          <div class="timeline">
-            <div class="tl-item"><p class="tl-date">Week 1</p><p class="tl-text"><b>Launch.</b> People comment to join and the guide starts going out.</p></div>
-            <div class="tl-item"><p class="tl-date">Every Monday</p><p class="tl-text"><b>Drawings.</b> A new winner picked each week to keep things fun.</p></div>
-            <div class="tl-item"><p class="tl-date">8 weeks</p><p class="tl-text"><b>Daily tracking.</b> The printable calendar keeps people going offline, not just posting.</p></div>
-            <div class="tl-item"><p class="tl-date">The finale</p><p class="tl-text"><b>Grand prize.</b> Justin Prince announces the winners on camera.</p></div>
-          </div>
-          <figure class="winner">
-            <img src="images/winner-card-1.jpg" loading="lazy" alt="Winner card cover: F.I.T. Family Challenge, Winners">
-            <img src="images/winner-card-2.jpg" loading="lazy" alt="Winner card inside: Congratulations, Jane Doe, Winner">
-            <figcaption>Winner cards I designed for the on-camera announcement. Name replaced for privacy.</figcaption>
-          </figure>
-        </div>
+    <h3 class="sub">The F.I.T. Family Challenge</h3>
+    <div class="per">
+      <div><h3>Problem</h3><p>Giveaways get one post. Justin Prince wanted families showing up for 8 weeks.</p></div>
+      <div><h3>Execution</h3><p>Three daily actions, a printable guide and tracker, weekly prizes, and a grand prize.</p></div>
+      <div class="result"><h3>Result</h3><p>More than 10,000 people signed up.</p></div>
+    </div>
+    <div class="program-visual">
+      <figure class="winner">
+        <img src="images/winner-card-1.jpg" loading="lazy" alt="Winner card cover: F.I.T. Family Challenge, Winners">
+        <img src="images/winner-card-2.jpg" loading="lazy" alt="Winner card inside: Congratulations, Jane Doe, Winner">
+        <figcaption>Winner cards for the on-camera announcement.</figcaption>
+      </figure>
+      <div>
+        <a class="btn ink" href="fit-family-challenge.pdf" target="_blank" rel="noopener">View the guide (PDF)</a>
       </div>
     </div>
 
-    <div class="program">
-      <div class="two-col">
-        <div class="prose">
-          <h3 class="sub">MAKE 75</h3>
-          <p>MAKE 75 was Justin Prince's challenge for affiliates heading into year-end: one personal-growth habit and one business-growth habit, every day from September 23 to December 6.</p>
-          <p>I wrote and designed the guide that turns his RISE Method and the MAKE Daily Method into a daily checklist, along with the key dates, check-in rules, and recognition moments that keep people going through day 75.</p>
-          <div class="cta-row" style="margin-top:30px;">
-            <a class="btn ink" href="make75-challenge-guide.pdf" target="_blank" rel="noopener">View the guide (PDF)</a>
-          </div>
-        </div>
-        <div class="timeline">
-          <div class="tl-item"><p class="tl-date">September 23</p><p class="tl-text"><b>Challenge begins.</b> Daily check-ins in the private group.</p></div>
-          <div class="tl-item"><p class="tl-date">Every Monday</p><p class="tl-text"><b>Recognition.</b> Weekly giveaways and shout-outs on the Monday Night Call.</p></div>
-          <div class="tl-item"><p class="tl-date">December 5</p><p class="tl-text"><b>MAKE Day of Giving.</b> Affiliates serve in their local communities.</p></div>
-          <div class="tl-item"><p class="tl-date">December 7</p><p class="tl-text"><b>Finale.</b> Final recognition and grand-prize announcements.</p></div>
-        </div>
+    <div class="mini-program">
+      <div>
+        <h3 class="sub">MAKE 75</h3>
+        <p>A 75-day affiliate challenge. I turned Justin Prince's RISE Method into a daily checklist and guide.</p>
       </div>
+      <a class="btn line" href="make75-challenge-guide.pdf" target="_blank" rel="noopener">View the guide (PDF)</a>
     </div>
   </div>
 </section>
@@ -570,7 +546,7 @@
 <section class="band sand" id="email-work">
   <div class="wrap">
     <h2 class="title">Emails, down to the code.</h2>
-    <p class="lede">Every send is hand-coded to the same standard, then tuned on opens, clicks, and what the audience responds to. Pick one to see the real design and the real code.</p>
+    <p class="context">Hand-coded to one standard. Pick one to see the design and the code.</p>
 
     <div class="tab-row" role="tablist" aria-label="Emails">
       <button class="tab-btn active" role="tab" aria-selected="true" data-group="email" data-target="launch">Launch day</button>
@@ -580,60 +556,40 @@
     </div>
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="launch" data-src="emails/precision-skincare-launch.html">
-      <div class="two-col">
-        <div class="prose">
-          <p class="meta">For subscribers. Goal: launch. Email and SMS.</p>
-          <p>The launch email had one job: introduce a brand-new category without overwhelming anyone. It opens with the system, explains the SPA Method&trade; in three words, then gives each product exactly one line.</p>
-          <p>The animated product GIF doubled as the launch-day SMS creative, so the two channels felt like one moment instead of two separate asks.</p>
-          <ul class="ticks">
-            <li>I wrote the copy from R&amp;D's materials and built the HTML</li>
-            <li>Sent at 10am MT, alongside SMS, the HUB post, and the landing page</li>
-          </ul>
+      <div class="email-layout">
+        <div class="email-side">
+          <p class="meta">Goal: launch a new category</p>
+          <ul class="ticks"><li>System first, then one line per product</li><li>GIF shared with the launch SMS</li></ul>
         </div>
         <div class="email-slot"></div>
       </div>
     </div>
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="running-low" data-src="emails/precision-skincare-running-low.html" hidden>
-      <div class="two-col">
-        <div class="prose">
-          <p class="meta">For subscribers. Goal: honest urgency.</p>
-          <p>Once launch gifts started moving, I wanted urgency that was real. The headline and progress bar reflect actual inventory, and the email says plainly that the Stack stays available after the gifts run out.</p>
-          <p>Honest urgency builds trust for the next launch. Invented scarcity burns it.</p>
-          <ul class="ticks">
-            <li>The progress bar is built from table cells, so it renders in Outlook too</li>
-            <li>Short by design: one number, one image, one button</li>
-          </ul>
+      <div class="email-layout">
+        <div class="email-side">
+          <p class="meta">Goal: honest urgency</p>
+          <ul class="ticks"><li>Real inventory, no invented scarcity</li><li>One number, one image, one button</li></ul>
         </div>
         <div class="email-slot"></div>
       </div>
     </div>
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="stack" data-src="emails/muscle-support-stack.html" hidden>
-      <div class="two-col">
-        <div class="prose">
-          <p class="meta">For customers. Goal: retention.</p>
-          <p>Most post-purchase emails keep talking about the goal a customer already hit, instead of what happens next. For this one, I wanted to shift the tone completely: less "start here," more "protect what you've built."</p>
-          <p>So I leaned into a moodier, editorial look with a lot more restraint than the bright, high-energy style most supplement brands default to.</p>
-          <ul class="ticks">
-            <li>I handled the creative direction, the copy, and the HTML build myself</li>
-            <li>It became the reference template for the rest of the retention series</li>
-          </ul>
+      <div class="email-layout">
+        <div class="email-side">
+          <p class="meta">Goal: retention</p>
+          <ul class="ticks"><li>"Protect what you've built," not "start here"</li><li>Became the template for the series</li></ul>
         </div>
         <div class="email-slot"></div>
       </div>
     </div>
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="revolution" data-src="emails/wellness-revolution.html" hidden>
-      <div class="two-col">
-        <div class="prose">
-          <p class="meta">For customers. Goal: education. Email and video.</p>
-          <p>This one sits higher up the funnel. Instead of pushing a product, it's built around a bigger idea: muscle matters more for healthy aging than most people think, not just weight loss.</p>
-          <p>I built it around a short doctor interview instead of product photography, since the goal was to get people thinking differently before asking them to buy anything.</p>
-          <ul class="ticks">
-            <li>I wrote the concept and the copy, and built the template</li>
-            <li>Paired with a real interview instead of a straight product pitch</li>
-          </ul>
+      <div class="email-layout">
+        <div class="email-side">
+          <p class="meta">Goal: education</p>
+          <ul class="ticks"><li>Built around a doctor interview</li><li>Changes minds before asking for a sale</li></ul>
         </div>
         <div class="email-slot"></div>
       </div>
@@ -644,34 +600,21 @@
 <!-- ================= SYSTEMS ================= -->
 <section class="band deep" id="systems">
   <div class="wrap">
-    <h2 class="title">Retired the drag-and-drop builder. Taught the team a better way.</h2>
-    <div class="two-col">
-      <div class="prose">
-        <p>When I started, emails came out of a drag-and-drop tool and SMS ran on an older platform. Every send looked a little different, and each one took too long to build. I rebuilt the tooling and the workflow.</p>
-        <ul class="ticks">
-          <li>Moved SMS and email from Ziplingo to Attentive, rebuilding segmentation and automations from scratch</li>
-          <li>Took the team from drag-and-drop templates to hand-coded HTML, built on one shared design standard</li>
-          <li>Trained the team to use Claude and ChatGPT for template builds, link checks across US and Canada campaigns, and claims review</li>
-          <li><b>The result: 10+ sends in a work week</b>, across campaigns, updates, and automated flows, at the same quality every time</li>
-          <li>Built a dashboard that pulls campaign data into one leadership-ready report, replacing a manual monthly build</li>
-        </ul>
-        <div class="tools">
-          <span>Attentive</span><span>Klaviyo</span><span>Claude</span><span>ChatGPT</span><span>HTML and CSS</span>
-        </div>
-      </div>
-      <div>
-        <div class="compare">
-          <figure>
-            <figcaption>Before <span>builder template</span></figcaption>
-            <div class="frame"><iframe src="emails/before-builder-template.html" loading="lazy" title="Before: drag-and-drop builder email"></iframe></div>
-          </figure>
-          <figure>
-            <figcaption>After <span>hand-coded</span></figcaption>
-            <div class="frame"><iframe src="emails/precision-skincare-launch.html" loading="lazy" title="After: hand-coded launch email"></iframe></div>
-          </figure>
-        </div>
-        <p class="compare-note">Both shown at phone width. Scroll inside each one to see the full email.</p>
-      </div>
+    <h2 class="title">Retired the drag-and-drop builder.</h2>
+    <div class="per">
+      <div><h3>Problem</h3><p>Builder emails were slow to make and never looked the same twice.</p></div>
+      <div><h3>Execution</h3><p>Moved us to Attentive, switched the team to hand-coded HTML, and trained everyone on Claude and ChatGPT.</p></div>
+      <div class="result"><h3>Result</h3><p>10+ sends in a work week, all at the same quality.</p></div>
+    </div>
+    <div class="compare">
+      <figure>
+        <figcaption>Before</figcaption>
+        <div class="frame"><iframe src="emails/before-builder-template.html" loading="lazy" title="Before: drag-and-drop builder email"></iframe></div>
+      </figure>
+      <figure>
+        <figcaption>After</figcaption>
+        <div class="frame"><iframe src="emails/precision-skincare-launch.html" loading="lazy" title="After: hand-coded launch email"></iframe></div>
+      </figure>
     </div>
   </div>
 </section>
