@@ -3,482 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bailey Gowans | Communications &amp; Systems</title>
-<meta name="description" content="Bailey Gowans - communications for wellness brands: product launches, PR, founder comms, community programs, and the systems behind them.">
+<title>Bailey Gowans | Communications</title>
+<meta name="description" content="Bailey Gowans leads communications for wellness brands: product launches, PR, founder comms, community programs, and the systems behind them.">
+<meta name="theme-color" content="#6D1A2F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#14161a;
-    --paper:#f2ecdd;
-    --paper-2:#eae2cd;
-    --rule:#c9c0a4;
-    --brick:#a83f26;
-    --sage:#5c7a63;
-    --console:#181a16;
-    --console-2:#212319;
-    --console-text:#d9d4c4;
-    --console-accent:#8fbf98;
-    --muted:#5b5648;
-    --max:1080px;
+    --wine:#6D1A2F;
+    --wine-deep:#3E0D1B;
+    --gold:#FFB938;
+    --blush:#FCE8E6;
+    --rose:#F7D9DC;
+    --muted:#6B4A52;
+    --white:#FFFFFF;
+    --line:rgba(109,26,47,0.18);
+    --max:1140px;
   }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
   }
-
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Work Sans', Arial, sans-serif;
-    font-weight:400;
-    line-height:1.6;
+    margin:0; background:var(--white); color:var(--wine-deep);
+    font-family:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-size:17px; line-height:1.6; font-variation-settings:'wdth' 100;
     -webkit-font-smoothing:antialiased;
   }
-
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
-
   a{color:inherit;}
+  img{max-width:100%;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+  :focus-visible{outline:3px solid var(--gold); outline-offset:3px;}
+  section[id]{scroll-margin-top:76px;}
 
-  /* ---------- NAV ---------- */
-  header.site{
-    position:sticky; top:0; z-index:50;
-    background:rgba(242,236,221,0.88);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
+  /* ---------- Display type ---------- */
+  .wide{font-stretch:125%; font-variation-settings:'wdth' 125;}
+  h1,h2,h3,h4{font-weight:800; line-height:1.05; letter-spacing:-0.02em; margin:0;}
+  h2.title{
+    font-size:clamp(34px, 5.2vw, 64px); font-stretch:118%; font-variation-settings:'wdth' 118;
+    color:var(--wine); max-width:16ch; margin-bottom:22px;
   }
-  .nav-inner{
-    max-width:var(--max); margin:0 auto; padding:18px 32px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .mark{
-    font-family:'JetBrains Mono', monospace;
-    font-size:13px; letter-spacing:0.08em;
-    font-weight:500;
-    text-decoration:none;
-    border:1px solid var(--ink);
-    padding:6px 10px;
-    border-radius:3px;
-  }
-  nav.links{display:flex; gap:28px;}
-  /* nav link styles defined in NAV DROPDOWN block */
+  .dark h2.title{color:var(--white);}
+  .lede{font-size:20px; line-height:1.55; max-width:58ch; margin:0 0 44px; color:var(--muted);}
+  .dark .lede{color:var(--rose);}
+  h3.sub{font-size:clamp(24px,2.6vw,30px); color:var(--wine); margin:0 0 16px;}
+  .dark h3.sub{color:var(--gold);}
 
-  /* ---------- HERO ---------- */
-  section.hero{padding:96px 0 72px;}
-  .eyebrow{
-    font-family:'JetBrains Mono', monospace;
-    font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
-    color:var(--sage);
-    margin:0 0 22px;
-    display:flex; align-items:center; gap:10px;
-  }
-  .eyebrow::before{
-    content:''; display:inline-block; width:22px; height:1px; background:var(--sage);
-  }
-  h1.display{
-    font-family:'Fraunces', Georgia, serif;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(38px, 6vw, 68px);
-    line-height:1.06;
-    letter-spacing:-0.01em;
-    margin:0 0 28px;
-    max-width:15ch;
-  }
-  p.lede{
-    font-size:19px; color:var(--muted); max-width:52ch; margin:0 0 40px;
-    font-weight:400;
-  }
-  .cta-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:56px;}
+  /* ---------- Buttons & links ---------- */
   .btn{
-    font-family:'JetBrains Mono', monospace;
-    font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:3px;
-    display:inline-block;
-    font-weight:500;
+    display:inline-block; text-decoration:none; font-weight:700; font-size:16px;
+    padding:15px 26px; border-radius:100px; border:2px solid currentColor; transition:transform .12s ease;
   }
-  .btn.primary{background:var(--ink); color:var(--paper);}
-  .btn.primary:hover{background:var(--brick);}
-  .btn.ghost{border:1px solid var(--ink); color:var(--ink);}
-  .btn.ghost:hover{border-color:var(--brick); color:var(--brick);}
+  .btn:hover{transform:translateY(-2px);}
+  .btn.gold{background:var(--gold); border-color:var(--gold); color:var(--wine-deep);}
+  .btn.wine{background:var(--wine); border-color:var(--wine); color:var(--white);}
+  .btn.line{color:var(--wine); background:transparent;}
+  .dark .btn.line, .hero .btn.line{color:var(--white);}
+  .link{font-weight:700; color:var(--wine); text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:4px; text-decoration-color:var(--gold);}
+  .dark .link{color:var(--gold); text-decoration-color:var(--gold);}
+  .link:hover{text-decoration-color:currentColor;}
 
-  /* ---------- TERMINAL ---------- */
-  .terminal{
-    background:var(--console);
-    border-radius:8px;
-    padding:0;
-    overflow:hidden;
-    box-shadow:0 18px 50px -20px rgba(20,22,26,0.5);
+  /* ---------- Header ---------- */
+  header.site{position:sticky; top:0; z-index:50; background:var(--wine); color:var(--white);}
+  .nav-inner{max-width:var(--max); margin:0 auto; padding:14px 32px; display:flex; align-items:center; justify-content:space-between;}
+  @media (max-width:640px){ .nav-inner{padding:12px 20px;} }
+  .mark{
+    font-weight:900; font-size:18px; text-decoration:none; font-stretch:125%; font-variation-settings:'wdth' 125;
+    background:var(--gold); color:var(--wine-deep); width:42px; height:42px; border-radius:50%;
+    display:grid; place-items:center; letter-spacing:-0.03em;
   }
-  .terminal-bar{
-    display:flex; align-items:center; gap:7px;
-    padding:12px 16px;
-    border-bottom:1px solid rgba(217,212,196,0.1);
-  }
-  .terminal-bar span{width:9px; height:9px; border-radius:50%; background:#4a4c43; display:inline-block;}
-  .terminal-title{
-    font-family:'JetBrains Mono', monospace; font-size:11px; color:#6b6d5f;
-    margin-left:8px; letter-spacing:0.04em;
-  }
-  .terminal-body{
-    font-family:'JetBrains Mono', monospace;
-    font-size:13.5px;
-    line-height:1.85;
-    color:var(--console-text);
-    padding:22px 24px 26px;
-    min-height:150px;
-  }
-  .terminal-body .line{opacity:0; white-space:pre-wrap;}
-  .terminal-body .prompt{color:var(--console-accent);}
-  .cursor{
-    display:inline-block; width:7px; height:14px; background:var(--console-accent);
-    vertical-align:-2px; animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{50%{opacity:0;}}
-
-  /* ---------- SECTION SCAFFOLD ---------- */
-  section.panel{padding:88px 0;}
-  section.panel.light{background:var(--paper);}
-  section.panel.light-alt{background:var(--paper-2); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);}
-  section.panel.dark{background:var(--console); color:var(--console-text);}
-
-  .case-head{display:flex; flex-direction:column; gap:16px; margin-bottom:44px; max-width:60ch;}
-  .case-title{
-    font-family:'Fraunces', Georgia, serif;
-    font-weight:500;
-    font-size:clamp(28px, 4vw, 40px);
-    line-height:1.15;
-    margin:0;
-  }
-  section.panel.dark .case-title{color:#f2ecdd;}
-  section.panel.dark .eyebrow{color:var(--console-accent);}
-  section.panel.dark .eyebrow::before{background:var(--console-accent);}
-
-  .case-body p{font-size:16.5px; color:var(--muted); max-width:62ch;}
-  section.panel.dark .case-body p{color:#b9b7a8;}
-
-  .two-col{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:start;}
-  @media (max-width:860px){.two-col{grid-template-columns:1fr;}}
-
-  /* ---------- CAMPAIGN TABS ---------- */
-  .campaign-intro{font-size:16.5px; color:var(--muted); max-width:66ch; margin:18px 0 0;}
-  .tab-row{display:flex; flex-wrap:wrap; gap:10px; margin:32px 0 36px;}
-  .tab-btn{
-    font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.02em;
-    padding:11px 18px; border-radius:20px; border:1px solid var(--ink);
-    background:transparent; color:var(--ink); cursor:pointer;
-  }
-  .tab-btn.active{background:var(--ink); color:var(--paper);}
-
-  .meta-chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;}
-  .meta-chip{
-    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.02em;
-    border:1px solid var(--rule); color:var(--muted);
-    padding:6px 12px; border-radius:16px;
-  }
-
-  .view-toggle{display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;}
-  .view-btn{
-    font-family:'JetBrains Mono', monospace; font-size:11.5px;
-    padding:8px 16px; border-radius:16px; border:1px solid var(--ink);
-    background:transparent; color:var(--ink); cursor:pointer;
-  }
-  .view-btn.active{background:var(--ink); color:var(--paper);}
-  .view-link{
-    font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--brick);
-    text-decoration:none; margin-left:auto;
-  }
-  .view-link:hover{text-decoration:underline;}
-
-  .email-frame-wrap{
-    border:1px solid var(--rule); border-radius:8px; overflow:hidden;
-    box-shadow:0 24px 60px -30px rgba(20,22,26,0.35);
-    background:#fff;
-  }
-  .email-frame{width:100%; height:640px; border:0; display:block;}
-
-  .code-view{
-    background:var(--console); color:var(--console-text);
-    font-family:'JetBrains Mono', monospace; font-size:11px; line-height:1.6;
-    padding:20px; border-radius:8px; max-height:640px; overflow:auto;
-    white-space:pre; margin:0;
-  }
-
-  /* ---------- COMMS/PR CARD GRID ---------- */
-  .comms-grid{display:flex; flex-wrap:wrap; gap:24px; margin-top:36px;}
-  @media (max-width:860px){.comms-grid{flex-direction:column;}}
-  .comms-card{
-    flex:1 1 280px;
-    background:#fff; border:1px solid var(--rule); border-radius:8px;
-    padding:26px 24px; display:flex; flex-direction:column; gap:12px;
-    box-shadow:0 18px 40px -28px rgba(20,22,26,0.3);
-  }
-  .comms-label{
-    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--brick);
-  }
-  .comms-card h4{font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:19px; margin:0; color:var(--ink);}
-  .comms-card p{font-size:14.5px; color:var(--muted); margin:0; line-height:1.6;}
-  .comms-card a.comms-link{
-    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--brick);
-    text-decoration:none; margin-top:auto; padding-top:6px;
-  }
-  .comms-card a.comms-link:hover{text-decoration:underline;}
-  .comms-footnote{font-size:14.5px; color:var(--muted); margin-top:28px;}
-  .comms-footnote a{color:var(--brick); text-decoration:none;}
-  .comms-footnote a:hover{text-decoration:underline;}
-
-  .notes-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:18px;}
-  .notes-list li{padding-left:22px; position:relative; font-size:15px; color:var(--muted);}
-  .notes-list li::before{content:'•'; position:absolute; left:0; color:var(--brick); font-size:18px; line-height:1;}
-  .notes-list b{color:var(--ink); font-weight:600;}
-  section.panel.dark .notes-list li{color:#b9b7a8;}
-  section.panel.dark .notes-list b{color:#f2ecdd;}
-  section.panel.dark .notes-list li::before{color:var(--console-accent);}
-
-  /* ---------- TIMELINE (case study 2) ---------- */
-  .timeline{display:flex; flex-direction:column; border-left:2px solid var(--rule); margin-left:6px;}
-  .tl-item{position:relative; padding:0 0 30px 26px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:''; position:absolute; left:-7px; top:3px; width:12px; height:12px;
-    border-radius:50%; background:var(--brick); border:3px solid var(--paper-2);
-  }
-  .tl-date{font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.06em; color:var(--brick); text-transform:uppercase; margin-bottom:4px;}
-  .tl-text{font-size:15px; color:var(--muted); margin:0;}
-  .tl-text b{color:var(--ink);}
-
-  /* ---------- STAT CHIPS ---------- */
-  .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
-  .chip{
-    font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.03em;
-    border:1px solid rgba(217,212,196,0.35); color:var(--console-text);
-    padding:7px 14px; border-radius:20px;
-  }
-
-  /* ---------- CHART (case study 3) ---------- */
-  .chart-card{
-    background:var(--console-2);
-    border:1px solid rgba(217,212,196,0.12);
-    border-radius:8px;
-    padding:26px 26px 20px;
-  }
-  .chart-label{font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:#8a8874; margin-bottom:4px;}
-  .chart-value{font-family:'Fraunces', serif; font-size:30px; color:#f2ecdd; margin:0 0 18px;}
-  .chart-value span{font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--console-accent); margin-left:10px; vertical-align:middle;}
-  .chart-foot{display:flex; justify-content:space-between; font-family:'JetBrains Mono', monospace; font-size:10.5px; color:#71705f; margin-top:6px;}
-
-  /* ---------- SKILLS GRID ---------- */
-  .skills-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
-  @media (max-width:700px){.skills-grid{grid-template-columns:1fr;}}
-  .skill-col h4{
-    font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--sage); margin:0 0 18px;
-  }
-  .skill-col ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
-  .skill-col li{
-    font-size:15.5px; padding-bottom:10px; border-bottom:1px solid var(--rule); color:var(--ink);
-  }
-
-  /* ---------- FOOTER ---------- */
-  footer.site{background:var(--ink); color:#e9e4d4; padding:64px 0 40px;}
-  footer .foot-head{
-    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
-    font-size:clamp(26px,4vw,38px); margin:0 0 26px; max-width:14ch;
-  }
-  footer .foot-row{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:48px;}
-  footer .btn.primary{background:#e9e4d4; color:var(--ink);}
-  footer .btn.primary:hover{background:var(--console-accent);}
-  footer .btn.ghost{border-color:#e9e4d4; color:#e9e4d4;}
-  .foot-meta{
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
-    font-family:'JetBrains Mono', monospace; font-size:11.5px; color:#8a8874;
-    border-top:1px solid rgba(233,228,212,0.15); padding-top:24px;
-  }
-
-  h2.section-heading{
-    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
-    font-size:clamp(24px,3vw,30px); margin:0 0 12px;
-  }
-
-  /* ---------- NAV DROPDOWN ---------- */
-  nav.links{align-items:center;}
+  nav.links{display:flex; align-items:center; gap:30px;}
   nav.links > a, .dd-toggle{
-    font-family:'Work Sans', Arial, sans-serif;
-    font-size:13px; text-decoration:none; letter-spacing:0.03em;
-    color:var(--muted); text-transform:uppercase; font-weight:500;
-    margin-left:0;
+    font-family:inherit; font-size:15.5px; font-weight:600; color:var(--white); text-decoration:none;
+    background:none; border:0; padding:6px 0; cursor:pointer;
   }
-  nav.links > a:hover, .dd-toggle:hover, .dd-toggle[aria-expanded="true"]{color:var(--brick);}
+  nav.links > a:hover, .dd-toggle:hover, .dd-toggle[aria-expanded="true"]{color:var(--gold);}
   .dd{position:relative;}
-  .dd-toggle{
-    background:none; border:0; padding:4px 0; cursor:pointer;
-    display:inline-flex; align-items:center; gap:7px;
-  }
+  .dd-toggle{display:inline-flex; align-items:center; gap:8px;}
   .dd-toggle svg{transition:transform .18s ease;}
   .dd-toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
   .dd-menu{
-    position:absolute; top:calc(100% + 16px); left:-20px;
-    width:330px; background:#fbf8f0; border:1px solid var(--rule); border-radius:8px;
-    box-shadow:0 24px 50px -24px rgba(20,22,26,0.35);
-    padding:10px; display:none;
+    position:absolute; top:calc(100% + 18px); left:-24px; width:340px;
+    background:var(--white); color:var(--wine-deep); border-radius:18px; padding:10px;
+    box-shadow:0 30px 60px -20px rgba(62,13,27,0.45); display:none; border-top:6px solid var(--gold);
   }
   .dd-menu.open{display:block;}
-  .dd-menu a{
-    display:block; text-decoration:none; color:var(--ink);
-    padding:10px 12px; border-radius:5px;
-    font-size:14.5px; font-weight:500; text-transform:none; letter-spacing:0;
-  }
-  .dd-menu a small{display:block; font-size:12.5px; font-weight:400; color:var(--muted); margin-top:1px;}
-  .dd-menu a:hover, .dd-menu a:focus-visible{background:var(--paper-2); outline:none;}
-  .dd-group{border-top:1px solid var(--rule); margin:8px 4px 0; padding:10px 0 2px;}
-  .dd-group-label{
-    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.08em;
-    color:var(--sage); padding:0 8px 4px; margin:0;
-  }
-  .dd-group a{padding:7px 12px 7px 20px; font-size:14px; font-weight:400; position:relative;}
-  .dd-group.plain a{padding-left:12px; font-size:14.5px; font-weight:500;}
-  .dd-group.plain a::before{display:none;}
-  .dd-group a::before{content:''; position:absolute; left:9px; top:50%; width:5px; height:1px; background:var(--rule);}
-  :focus-visible{outline:2px solid var(--brick); outline-offset:3px;}
+  .dd-menu a{display:block; text-decoration:none; padding:10px 14px; border-radius:10px; font-weight:700; font-size:16px; color:var(--wine);}
+  .dd-menu a small{display:block; font-weight:400; font-size:13.5px; color:var(--muted); margin-top:1px;}
+  .dd-menu a:hover, .dd-menu a:focus-visible{background:var(--blush); outline:none;}
+  .dd-group{margin:6px 4px 0; padding:10px 0 2px; border-top:1px solid var(--line);}
+  .dd-group-label{font-weight:800; font-size:13px; color:var(--wine-deep); padding:0 10px 4px; margin:0;}
+  .dd-group a{font-weight:500; font-size:15px; padding:7px 14px;}
+  .dd-group.plain a{font-weight:700; font-size:16px;}
   @media (max-width:640px){
     .nav-extra{display:none;}
-    .dd-menu{position:fixed; left:16px; right:16px; top:64px; width:auto; max-height:calc(100vh - 90px); overflow:auto;}
+    .dd-menu{position:fixed; left:14px; right:14px; top:70px; width:auto; max-height:calc(100vh - 90px); overflow:auto;}
   }
 
-  section[id]{scroll-margin-top:70px;}
-  /* ---------- CASE INDEX ---------- */
-  .case-index{display:flex; flex-wrap:wrap; gap:10px 26px; margin-top:22px; padding:0; list-style:none;}
-  .case-index a{font-size:15px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); padding-bottom:2px;}
-  .case-index a:hover{color:var(--brick); border-color:var(--brick);}
-  section#work{padding:72px 0 64px;}
-  section#work p{color:var(--muted); font-size:16.5px; max-width:60ch; margin:0;}
-
-  /* ---------- FACTS ---------- */
-  .facts{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:8px 0 52px; border-top:1px solid var(--ink); border-bottom:1px solid var(--rule);}
-  .facts div{padding:18px 20px 20px 0;}
-  .facts div + div{padding-left:20px; border-left:1px solid var(--rule);}
-  .facts dt{font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.06em; color:var(--brick); margin-bottom:6px;}
-  .facts dd{margin:0; font-size:15px; color:var(--ink); line-height:1.5;}
-  .facts .result dd{font-family:'Fraunces', Georgia, serif; font-style:italic; font-size:19px; line-height:1.3;}
-  @media (max-width:860px){
-    .facts{grid-template-columns:1fr 1fr;}
-    .facts div:nth-child(3){padding-left:0; border-left:0;}
-    .facts div:nth-child(n+3){border-top:1px solid var(--rule);}
+  /* ---------- Hero ---------- */
+  .hero{background:var(--wine); color:var(--white); padding:72px 0 88px; position:relative; overflow:hidden;}
+  .hero h1{
+    font-size:clamp(58px, 12.5vw, 176px); font-weight:900; line-height:0.86; letter-spacing:-0.045em;
+    font-stretch:125%; font-variation-settings:'wdth' 125; color:var(--white); margin:0 0 34px;
   }
-  @media (max-width:520px){
-    .facts{grid-template-columns:1fr;}
-    .facts div, .facts div + div{padding-left:0; border-left:0;}
-    .facts div + div{border-top:1px solid var(--rule);}
+  .hero h1 span{display:block; color:var(--gold);}
+  .hero-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:64px; align-items:end;}
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:48px;} }
+  .hero .intro{font-size:22px; line-height:1.5; color:var(--rose); max-width:36ch; margin:0 0 32px;}
+  .hero .intro strong{color:var(--white); font-weight:700;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .sticker{
+    position:absolute; top:64px; right:6%; width:168px; height:168px; border-radius:50%;
+    background:var(--gold); color:var(--wine-deep); display:grid; place-items:center; text-align:center;
+    font-weight:900; font-size:21px; line-height:1.05; padding:20px; text-decoration:none;
+    font-stretch:112%; font-variation-settings:'wdth' 112; transform:rotate(12deg);
+    box-shadow:0 18px 40px -16px rgba(0,0,0,0.45); transition:transform .2s ease;
   }
+  .sticker:hover{transform:rotate(4deg) scale(1.04);}
+  @media (max-width:900px){ .sticker{position:static; margin:0 0 28px auto; width:130px; height:130px; font-size:17px;} }
+  .work-list{list-style:none; margin:0; padding:0; border-top:2px solid rgba(255,255,255,0.25);}
+  .work-list a{
+    display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    padding:14px 0; border-bottom:2px solid rgba(255,255,255,0.25); text-decoration:none;
+    font-weight:700; font-size:19px; color:var(--white);
+  }
+  .work-list a span{font-weight:400; font-size:14.5px; color:var(--rose); text-align:right;}
+  .work-list a:hover{color:var(--gold);}
 
-  /* ---------- TAB PANELS (generic) ---------- */
+  /* ---------- Sections ---------- */
+  section.band{padding:104px 0;}
+  @media (max-width:640px){ section.band{padding:72px 0;} }
+  .band.white{background:var(--white);}
+  .band.blush{background:var(--blush);}
+  .band.dark{background:var(--wine); color:var(--white);}
+  .band.deep{background:var(--wine-deep); color:var(--white);}
+  .deep h2.title{color:var(--white);}
+  .deep .lede{color:var(--rose);}
+  .two-col{display:grid; grid-template-columns:1.05fr 0.95fr; gap:64px; align-items:start;}
+  @media (max-width:900px){ .two-col{grid-template-columns:1fr; gap:44px;} }
+  .prose p{margin:0 0 18px; max-width:60ch;}
+  .dark .prose p, .deep .prose p{color:var(--rose);}
+  .ticks{list-style:none; margin:24px 0 0; padding:0;}
+  .ticks li{position:relative; padding:0 0 0 30px; margin:0 0 14px; max-width:58ch;}
+  .ticks li::before{content:''; position:absolute; left:0; top:9px; width:14px; height:14px; border-radius:50%; background:var(--gold);}
+  .dark .ticks li, .deep .ticks li{color:var(--rose);}
+  .ticks b, .dark .ticks b, .deep .ticks b{color:inherit;}
+  .dark .ticks b, .deep .ticks b{color:var(--white);}
+
+  /* ---------- Launch facts ---------- */
+  .facts{display:grid; grid-template-columns:repeat(3,1fr) 1.25fr; gap:14px; margin:0 0 64px;}
+  .facts div{background:var(--blush); border-radius:18px; padding:22px 22px 24px;}
+  .facts dt{font-weight:800; font-size:14px; color:var(--wine); margin-bottom:8px;}
+  .facts dd{margin:0; font-size:16px; line-height:1.45;}
+  .facts .result{background:var(--gold);}
+  .facts .result dt{color:var(--wine-deep);}
+  .facts .result dd{font-weight:800; font-size:24px; line-height:1.15; font-stretch:112%; font-variation-settings:'wdth' 112;}
+  @media (max-width:900px){ .facts{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .facts{grid-template-columns:1fr;} }
+
+  /* ---------- Timeline (real sequences only) ---------- */
+  .timeline{position:relative; padding-left:34px;}
+  .timeline::before{content:''; position:absolute; left:8px; top:6px; bottom:6px; width:3px; background:var(--gold); border-radius:3px;}
+  .tl-item{position:relative; margin:0 0 28px;}
+  .tl-item:last-child{margin-bottom:0;}
+  .tl-item::before{content:''; position:absolute; left:-34px; top:4px; width:19px; height:19px; border-radius:50%; background:var(--wine); border:4px solid var(--gold);}
+  .tl-date{font-weight:800; font-size:14px; color:var(--wine); margin:0 0 2px;}
+  .tl-text{margin:0;}
+  .tl-text b{font-weight:700;}
+
+  /* ---------- Tabs ---------- */
+  .tab-row{display:flex; gap:10px; margin:0 0 34px; overflow-x:auto; padding-bottom:4px;}
+  @media (min-width:900px){ .tab-row{flex-wrap:wrap;} }
+  .tab-btn{
+    font-family:inherit; font-size:15.5px; font-weight:700; white-space:nowrap; cursor:pointer;
+    padding:12px 20px; border-radius:100px; border:2px solid var(--wine); background:transparent; color:var(--wine);
+  }
+  .tab-btn:hover{background:var(--rose);}
+  .tab-btn.active{background:var(--wine); color:var(--white);}
   .tab-panel[hidden]{display:none !important;}
-  .kit-head{margin:64px 0 0; max-width:60ch;}
-  .kit-head h4{font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:24px; margin:0 0 8px;}
-  .kit-head p{margin:0; color:var(--muted); font-size:15.5px;}
+  .kit{margin-top:88px;}
+  .kit h3.sub{margin-bottom:6px;}
+  .kit > p{margin:0 0 26px; color:var(--muted);}
+  .panel-note{max-width:62ch; margin:0 0 24px;}
+
   .shots{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
-  @media (max-width:760px){.shots{grid-template-columns:1fr;}}
+  @media (max-width:760px){ .shots{grid-template-columns:1fr;} }
   figure.shot{margin:0;}
-  figure.shot img{display:block; width:100%; height:auto; border:1px solid var(--rule); border-radius:6px; background:#fff;}
-  figure.shot figcaption{font-size:13.5px; color:var(--muted); margin-top:10px;}
-  .panel-note{font-size:15.5px; color:var(--muted); max-width:62ch; margin:0 0 22px;}
-  .text-link{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--brick); text-decoration:none;}
-  .text-link:hover{text-decoration:underline;}
+  figure.shot img{display:block; width:100%; height:auto; border-radius:14px; box-shadow:0 0 0 1px var(--line);}
+  figure.shot figcaption{font-size:15px; color:var(--muted); margin-top:10px;}
 
-  .sms{display:grid; grid-template-columns:minmax(0,340px) 1fr; gap:44px; align-items:center;}
-  @media (max-width:760px){.sms{grid-template-columns:1fr;}}
-  .phone{background:var(--ink); border-radius:30px; padding:14px; box-shadow:0 24px 60px -30px rgba(20,22,26,0.5);}
-  .phone-screen{background:#f4f4f4; border-radius:20px; padding:18px 14px 22px;}
-  .bubble{background:#e5e5ea; border-radius:18px 18px 18px 4px; overflow:hidden; max-width:92%;}
+  .sms{display:grid; grid-template-columns:minmax(0,340px) 1fr; gap:48px; align-items:center;}
+  @media (max-width:760px){ .sms{grid-template-columns:1fr;} }
+  .phone{background:var(--wine-deep); border-radius:34px; padding:14px; box-shadow:0 30px 60px -30px rgba(62,13,27,0.55);}
+  .phone-screen{background:#F2F2F4; border-radius:22px; padding:18px 14px 22px;}
+  .bubble{background:#E5E5EA; border-radius:18px 18px 18px 4px; overflow:hidden; max-width:92%;}
   .bubble img{display:block; width:100%; height:auto;}
-  .bubble p{margin:0; padding:10px 13px 12px; font-size:13px; line-height:1.45; color:#1a1a1a; font-family:-apple-system, 'Helvetica Neue', Arial, sans-serif;}
-  blockquote.copy{margin:0; padding-left:20px; border-left:2px solid var(--brick); font-family:'Fraunces', serif; font-size:19px; line-height:1.5; color:var(--ink);}
+  .bubble p{margin:0; padding:10px 13px 12px; font-size:13px; line-height:1.45; color:#1A1A1A; font-family:-apple-system, 'Helvetica Neue', Arial, sans-serif;}
+  .pull{font-weight:800; font-size:clamp(26px,3vw,36px); line-height:1.12; color:var(--wine); margin:0; font-stretch:112%; font-variation-settings:'wdth' 112;}
 
-  .email-cards{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
-  @media (max-width:760px){.email-cards{grid-template-columns:1fr;}}
-  .email-card{
-    display:block; text-decoration:none; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:22px 24px;
-  }
-  .email-card:hover{border-color:var(--brick);}
-  .email-card b{display:block; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:19px; color:var(--ink); margin-bottom:6px;}
-  .email-card span{font-size:14.5px; color:var(--muted);}
+  .email-cards{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media (max-width:760px){ .email-cards{grid-template-columns:1fr;} }
+  .email-card{display:block; text-decoration:none; background:var(--blush); border-radius:18px; padding:24px 26px; border:2px solid transparent;}
+  .email-card:hover{border-color:var(--wine);}
+  .email-card b{display:block; font-size:20px; font-weight:800; color:var(--wine); margin-bottom:6px;}
+  .email-card span{color:var(--muted);}
 
-  /* ---------- GOVERNANCE ---------- */
-  .gov-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:8px;}
-  @media (max-width:860px){.gov-grid{grid-template-columns:1fr;}}
-  .gov-card{background:#fff; border:1px solid var(--rule); border-radius:8px; padding:28px 28px 26px;}
-  .gov-card h4{font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:22px; margin:0 0 10px;}
-  .gov-card p{font-size:15px; color:var(--muted); margin:0 0 16px;}
-  .rule-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule);}
-  .rule-list li{font-size:14px; color:var(--ink); padding:9px 0; border-bottom:1px solid var(--rule); display:grid; grid-template-columns:118px 1fr; gap:12px;}
-  .rule-list li span{font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--sage); padding-top:2px;}
-  .rewrite{margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--rule); border-radius:8px; overflow:hidden; background:#fff;}
-  @media (max-width:760px){.rewrite{grid-template-columns:1fr;}}
-  .rewrite > div{padding:24px 26px;}
-  .rewrite > div + div{border-left:1px solid var(--rule); background:#fbf8f0;}
-  @media (max-width:760px){.rewrite > div + div{border-left:0; border-top:1px solid var(--rule);}}
-  .rewrite h5{font-family:'JetBrains Mono', monospace; font-weight:500; font-size:11.5px; letter-spacing:0.06em; margin:0 0 10px;}
-  .rewrite .no h5{color:var(--brick);}
-  .rewrite .yes h5{color:var(--sage);}
-  .rewrite p{margin:0; font-size:17px; line-height:1.5; color:var(--ink);}
-  .rewrite .no p{text-decoration:line-through; text-decoration-color:rgba(168,63,38,0.55); color:var(--muted);}
-  .rewrite-cap{font-size:13.5px; color:var(--muted); margin:12px 0 0;}
+  /* ---------- Governance ---------- */
+  .gov-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  @media (max-width:900px){ .gov-grid{grid-template-columns:1fr;} }
+  .gov-card{background:var(--white); border-radius:22px; padding:34px 32px;}
+  .gov-card.feature{background:var(--wine); color:var(--white);}
+  .gov-card.feature h3.sub{color:var(--gold);}
+  .gov-card.feature p{color:var(--rose);}
+  .gov-card p{margin:0 0 16px;}
+  .rule-list{list-style:none; margin:8px 0 0; padding:0;}
+  .rule-list li{display:grid; grid-template-columns:110px 1fr; gap:14px; padding:11px 0; border-top:1px solid var(--line); font-size:15.5px;}
+  .rule-list li span{font-weight:800; color:var(--wine);}
+  .rewrite{margin-top:22px; display:grid; grid-template-columns:1fr 1fr; border-radius:22px; overflow:hidden;}
+  @media (max-width:760px){ .rewrite{grid-template-columns:1fr;} }
+  .rewrite > div{padding:30px 32px;}
+  .rewrite .no{background:var(--white);}
+  .rewrite .yes{background:var(--gold);}
+  .rewrite h4{font-size:15px; font-weight:800; margin:0 0 10px; color:var(--wine);}
+  .rewrite .yes h4{color:var(--wine-deep);}
+  .rewrite p{margin:0; font-size:20px; line-height:1.4; font-weight:600;}
+  .rewrite .no p{text-decoration:line-through; text-decoration-color:var(--wine); text-decoration-thickness:2px; color:var(--muted); font-weight:500;}
+  .rewrite-cap{font-size:14.5px; color:var(--muted); margin:14px 0 0;}
 
   /* ---------- PR ---------- */
-  .comms-grid.four .comms-card{flex:1 1 calc(50% - 12px);}
-  .comms-card.proposal{background:transparent; border-style:dashed; box-shadow:none;}
-  .status{
-    align-self:flex-start; font-family:'JetBrains Mono', monospace; font-size:11px;
-    border:1px solid var(--sage); color:var(--sage); padding:3px 10px; border-radius:12px;
+  .pr-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:20px;}
+  @media (max-width:900px){ .pr-grid{grid-template-columns:1fr;} }
+  .pr-item{border-radius:22px; padding:32px 30px; display:flex; flex-direction:column; gap:12px;}
+  .pr-item h3{font-size:clamp(22px,2.2vw,27px); line-height:1.12;}
+  .pr-item p{margin:0;}
+  .pr-item .link{margin-top:auto; padding-top:6px;}
+  .pr-item.press{background:var(--gold); color:var(--wine-deep); grid-row:span 2; justify-content:flex-end; min-height:360px;}
+  .pr-item.press h3{font-size:clamp(30px,3.6vw,46px); font-stretch:115%; font-variation-settings:'wdth' 115;}
+  .pr-item.press .link{color:var(--wine-deep); text-decoration-color:var(--wine-deep); margin-top:10px;}
+  .pr-item.plain{background:rgba(255,255,255,0.08); color:var(--white);}
+  .pr-item.plain h3{color:var(--white);}
+  .pr-item.plain p{color:var(--rose);}
+  .pr-item.proposal{background:transparent; border:2px dashed rgba(255,185,56,0.7); color:var(--white);}
+  .pr-item.proposal p{color:var(--rose);}
+  .kind{font-weight:800; font-size:14px;}
+  .pr-item.plain .kind, .pr-item.proposal .kind{color:var(--gold);}
+  .pr-foot{margin:34px 0 0; color:var(--rose);}
+
+  /* ---------- Programs ---------- */
+  h2.title + .program, h2.title + .skills-grid{margin-top:44px;}
+  .program + .program{margin-top:96px;}
+  .big-stat{
+    display:inline-block; background:var(--wine); color:var(--white); border-radius:14px;
+    padding:14px 20px; font-weight:800; font-size:22px; margin:6px 0 24px;
+    font-stretch:112%; font-variation-settings:'wdth' 112;
+  }
+  .winner{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:40px 0 0;}
+  .winner img{display:block; width:100%; height:auto; background:var(--white); border-radius:10px; padding:10px; box-shadow:0 20px 40px -24px rgba(62,13,27,0.45);}
+  .winner img:first-child{transform:rotate(-2.5deg);}
+  .winner img:nth-child(2){transform:rotate(2deg);}
+  .winner figcaption{grid-column:1 / -1; font-size:15px; color:var(--muted); margin-top:10px;}
+
+  /* ---------- Email viewer ---------- */
+  .meta{font-weight:700; color:var(--wine); margin:0 0 16px;}
+  .view-toggle{display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;}
+  .view-btn{
+    font-family:inherit; font-size:14.5px; font-weight:700; cursor:pointer;
+    padding:9px 18px; border-radius:100px; border:2px solid var(--wine); background:transparent; color:var(--wine);
+  }
+  .view-btn.active{background:var(--wine); color:var(--white);}
+  .view-toggle .link{margin-left:auto; font-size:15px;}
+  .email-frame-wrap{border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 0 0 2px var(--wine), 0 30px 60px -30px rgba(62,13,27,0.5);}
+  .email-frame{width:100%; height:660px; border:0; display:block;}
+  .code-view{
+    background:var(--wine-deep); color:var(--rose); font-family:ui-monospace, Menlo, Consolas, monospace;
+    font-size:12px; line-height:1.6; padding:22px; border-radius:18px; max-height:660px; overflow:auto; white-space:pre; margin:0;
   }
 
-  /* ---------- PROGRAMS ---------- */
-  .program + .program{margin-top:80px; padding-top:64px; border-top:1px solid var(--rule);}
-  .program h4{font-family:'Fraunces', serif; font-weight:500; font-size:clamp(24px,3vw,30px); line-height:1.2; margin:0 0 18px;}
-  .winner{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:34px;}
-  .winner img{display:block; padding:10px; width:100%; height:auto; border:1px solid var(--rule); border-radius:4px; background:#fff;}
-  .winner figcaption{grid-column:1 / -1; font-size:13.5px; color:var(--muted);}
-  .big-stat{font-family:'Fraunces', serif; font-style:italic; font-size:21px; color:var(--ink); margin:22px 0 !important;}
-
-  /* ---------- EMAIL TABS OVERFLOW ---------- */
-  .tab-row{overflow-x:auto; flex-wrap:nowrap; padding-bottom:4px;}
-  .tab-btn{white-space:nowrap;}
-  @media (min-width:900px){.tab-row{flex-wrap:wrap;}}
-
-  /* ---------- BEFORE / AFTER ---------- */
+  /* ---------- Before / after ---------- */
   .compare{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:520px){ .compare{grid-template-columns:1fr;} }
   .compare figure{margin:0;}
-  .compare .frame{border-radius:8px; overflow:hidden; border:1px solid rgba(217,212,196,0.18); background:#fff;}
-  .compare iframe{display:block; width:100%; height:460px; border:0;}
-  .compare figcaption{font-family:'JetBrains Mono', monospace; font-size:11.5px; color:#8a8874; margin-bottom:10px;}
-  .compare figcaption b{color:var(--console-accent); font-weight:500;}
-  .compare-note{font-family:'JetBrains Mono', monospace; font-size:11.5px; color:#71705f; margin-top:14px; line-height:1.7;}
-  @media (max-width:520px){.compare{grid-template-columns:1fr;}}
+  .compare figcaption{font-weight:800; margin-bottom:10px; color:var(--gold);}
+  .compare figcaption span{font-weight:400; color:var(--rose);}
+  .compare .frame{border-radius:16px; overflow:hidden; background:#fff;}
+  .compare iframe{display:block; width:100%; height:480px; border:0;}
+  .compare-note{font-size:14.5px; color:var(--rose); margin-top:14px;}
+  .tools{display:flex; flex-wrap:wrap; gap:8px; margin-top:28px;}
+  .tools span{background:rgba(255,255,255,0.1); color:var(--white); font-weight:600; font-size:14.5px; padding:8px 16px; border-radius:100px;}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  @media (max-width:760px){ .skills-grid{grid-template-columns:1fr;} }
+  .skill-col{background:var(--blush); border-radius:22px; padding:32px;}
+  .skill-col h3{font-size:22px; color:var(--wine); margin:0 0 16px;}
+  .skill-col ul{list-style:none; margin:0; padding:0;}
+  .skill-col li{padding:10px 0; border-top:1px solid var(--line);}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--gold); color:var(--wine-deep); padding:96px 0 40px;}
+  footer h2{
+    font-size:clamp(46px, 9vw, 120px); font-weight:900; line-height:0.9; letter-spacing:-0.04em;
+    font-stretch:125%; font-variation-settings:'wdth' 125; color:var(--wine); margin:0 0 36px;
+  }
+  footer .cta-row{margin-bottom:72px;}
+  footer .btn.line{color:var(--wine);}
+  .foot-meta{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-weight:600; font-size:15px; border-top:2px solid rgba(62,13,27,0.2); padding-top:22px;}
 </style>
 </head>
 <body>
 
 <header class="site">
   <div class="nav-inner">
-    <a class="mark" href="#top">BG</a>
+    <a class="mark" href="#top" aria-label="Bailey Gowans, back to top">BG</a>
     <nav class="links" aria-label="Main">
       <div class="dd">
         <button class="dd-toggle" type="button" aria-expanded="false" aria-controls="case-menu">
           Case studies
-          <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <svg width="11" height="7" viewBox="0 0 11 7" aria-hidden="true"><path d="M1 1l4.5 4.5L10 1" fill="none" stroke="currentColor" stroke-width="2"/></svg>
         </button>
         <div class="dd-menu" id="case-menu">
           <a href="#launch">Precision Skincare launch<small>A new product category, January to September</small></a>
           <a href="#governance">Brand governance<small>Claims checking and design standards</small></a>
-          <a href="#pr">PR &amp; executive comms<small>Press, podcast, founder voice</small></a>
+          <a href="#pr">PR and executive comms<small>Press, podcast, founder voice</small></a>
           <a href="#community">Community programs<small>F.I.T. Family and MAKE 75</small></a>
           <div class="dd-group">
             <p class="dd-group-label">Emails</p>
@@ -488,7 +338,7 @@
             <a href="#email-work" data-open-tab="email:revolution">The Next Wellness Revolution</a>
           </div>
           <div class="dd-group plain">
-            <a href="#systems">Systems &amp; AI<small>How the team ships 10+ sends a week</small></a>
+            <a href="#systems">Systems and AI<small>How the team ships 10+ sends a week</small></a>
           </div>
         </div>
       </div>
@@ -500,50 +350,33 @@
 
 <section class="hero" id="top">
   <div class="wrap">
-    <div class="two-col" style="align-items:center;">
+    <a class="sticker" href="#launch">Sold out in 6 hours</a>
+    <h1>Bailey <span>Gowans</span></h1>
+    <div class="hero-grid">
       <div>
-        <p class="eyebrow">Communications &amp; Systems</p>
-        <h1 class="display">Complicated science, made clear.</h1>
-        <p class="lede">Hey, I'm Bailey. I lead communications at MAKE Wellness, a peptide wellness brand. I turn R&amp;D findings and founder vision into launches, press, community programs, and emails, and I build the systems that keep all of it on brand, compliant, and on schedule.</p>
+        <p class="intro"><strong>I make complicated science easy to love.</strong> I lead communications at MAKE Wellness, turning R&amp;D findings and founder vision into launches, press, community programs, and emails, plus the systems that keep it all on brand and on time.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#work">View case studies</a>
-          <a class="btn ghost" href="resume.pdf" download>Download resume</a>
+          <a class="btn gold" href="#launch">See the work</a>
+          <a class="btn line" href="resume.pdf" download>Download resume</a>
         </div>
       </div>
-      <div class="terminal" id="hero-terminal">
-        <div class="terminal-bar">
-          <span></span><span></span><span></span>
-          <span class="terminal-title">this_week.sh</span>
-        </div>
-        <div class="terminal-body" id="terminal-body"></div>
-      </div>
+      <ul class="work-list" aria-label="Case studies">
+        <li><a href="#launch">Precision Skincare launch <span>Product launch</span></a></li>
+        <li><a href="#governance">Brand governance <span>Claims and standards</span></a></li>
+        <li><a href="#pr">PR and founder voice <span>Press, podcast</span></a></li>
+        <li><a href="#community">Community programs <span>10,000+ sign-ups</span></a></li>
+        <li><a href="#email-work">Emails <span>Design and code</span></a></li>
+        <li><a href="#systems">Systems and AI <span>10+ sends a week</span></a></li>
+      </ul>
     </div>
-  </div>
-</section>
-
-<section class="panel light-alt" id="work">
-  <div class="wrap">
-    <h2 class="section-heading">Case studies</h2>
-    <p>From a full product launch to the systems behind a 10+ send week. Each one covers the problem, my role, and what came out of it.</p>
-    <ul class="case-index">
-      <li><a href="#launch">Precision Skincare launch</a></li>
-      <li><a href="#governance">Brand governance</a></li>
-      <li><a href="#pr">PR &amp; executive comms</a></li>
-      <li><a href="#community">Community programs</a></li>
-      <li><a href="#email-work">Emails</a></li>
-      <li><a href="#systems">Systems &amp; AI</a></li>
-    </ul>
   </div>
 </section>
 
 <!-- ================= LAUNCH ================= -->
-<section class="panel light" id="launch">
+<section class="band white" id="launch">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / Product launch</p>
-      <h3 class="case-title">Taking a supplement brand into skincare.</h3>
-      <p class="campaign-intro">In January 2026, R&amp;D handed us an entirely new category: Precision Skincare, a three-product Skin Renewal System. My job was to turn their formulation science into language customers and affiliates would respond to, then carry that one message across every channel by launch day in September.</p>
-    </div>
+    <h2 class="title">Taking a supplement brand into skincare.</h2>
+    <p class="lede">In January 2026, R&amp;D handed us an entirely new category: Precision Skincare, a three-product Skin Renewal System. My job was to turn their formulation science into language customers and affiliates would respond to, then carry that one message across every channel by launch day in September.</p>
 
     <dl class="facts">
       <div><dt>Timeline</dt><dd>January to September 2026</dd></div>
@@ -553,107 +386,90 @@
     </dl>
 
     <div class="two-col">
-      <div class="case-body">
+      <div class="prose">
         <p>The hardest part wasn't writing copy. It was translation. R&amp;D's materials were written for scientists. Customers needed to understand each product in a single sentence, and affiliates needed a story they could retell in their own words.</p>
         <p>I anchored everything on the SPA Method&trade; (Signal. Preserve. Amplify.) so every touchpoint told the same story, then gave each product exactly one benefit line, written to stay inside our claims guidelines.</p>
         <p>On launch day, the email, SMS, affiliate HUB post, and landing page all went live on that same framework. The follow-up email used real inventory to create urgency instead of inventing scarcity.</p>
       </div>
-      <div>
-        <div class="timeline">
-          <div class="tl-item">
-            <p class="tl-date">January 2026</p>
-            <p class="tl-text"><b>R&amp;D handoff.</b> Formulation materials become customer and affiliate messaging.</p>
-          </div>
-          <div class="tl-item">
-            <p class="tl-date">Summit</p>
-            <p class="tl-text"><b>First preview.</b> Affiliates see the line early and start building anticipation.</p>
-          </div>
-          <div class="tl-item">
-            <p class="tl-date">Launch day, September</p>
-            <p class="tl-text"><b>Every channel at once.</b> Email at 10am MT, SMS, the HUB post, and the landing page go live together.</p>
-          </div>
-          <div class="tl-item">
-            <p class="tl-date">Within 6 hours</p>
-            <p class="tl-text"><b>Sold out.</b> The fastest launch build we've done.</p>
-          </div>
-        </div>
+      <div class="timeline">
+        <div class="tl-item"><p class="tl-date">January 2026</p><p class="tl-text"><b>R&amp;D handoff.</b> Formulation materials become customer and affiliate messaging.</p></div>
+        <div class="tl-item"><p class="tl-date">Summit</p><p class="tl-text"><b>First preview.</b> Affiliates see the line early and start building anticipation.</p></div>
+        <div class="tl-item"><p class="tl-date">Launch day, September</p><p class="tl-text"><b>Every channel at once.</b> Email at 10am MT, SMS, the HUB post, and the landing page go live together.</p></div>
+        <div class="tl-item"><p class="tl-date">Within 6 hours</p><p class="tl-text"><b>Sold out.</b> The fastest launch build we've done.</p></div>
       </div>
     </div>
 
-    <div class="kit-head">
-      <h4>The launch, channel by channel</h4>
+    <div class="kit">
+      <h3 class="sub">The launch, channel by channel</h3>
       <p>Same story, shaped for where each audience would see it.</p>
-    </div>
-    <div class="tab-row" role="tablist" aria-label="Launch channels">
-      <button class="tab-btn active" role="tab" aria-selected="true" data-group="kit" data-target="sms">SMS</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="hub">Affiliate HUB post</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="landing">Landing page</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="emails">Launch emails</button>
-    </div>
+      <div class="tab-row" role="tablist" aria-label="Launch channels">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-group="kit" data-target="sms">SMS</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="hub">Affiliate HUB post</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="landing">Landing page</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-group="kit" data-target="emails">Launch emails</button>
+      </div>
 
-    <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="sms">
-      <div class="sms">
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="bubble">
-              <img src="images/sms-launch.gif" width="600" height="400" alt="Animated product GIF of the Precision Skincare serum">
-              <p>MEET THE SPA METHOD. Signal. Preserve. Amplify. PRECISION SKINCARE by MAKE is here. Three products. One Skin Renewal System. Launch gifts available while supplies last.</p>
+      <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="sms">
+        <div class="sms">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="bubble">
+                <img src="images/sms-launch.gif" width="600" height="400" alt="Animated product GIF of the Precision Skincare serum">
+                <p>MEET THE SPA METHOD. Signal. Preserve. Amplify. PRECISION SKINCARE by MAKE is here. Three products. One Skin Renewal System. Launch gifts available while supplies last.</p>
+              </div>
             </div>
           </div>
+          <div>
+            <p class="pull">Three products. One Skin Renewal System.</p>
+            <p class="panel-note" style="margin-top:20px;">A text has a few seconds to land. I led with the framework, named the category, and closed on the one reason to act now. The same GIF anchors the launch email, so the two channels read as one moment.</p>
+          </div>
         </div>
-        <div>
-          <p class="panel-note">A text has a few seconds to land. I led with the framework, named the category, and closed on the one reason to act now. The same GIF anchors the launch email, so the two channels read as one moment.</p>
-          <blockquote class="copy">Three products. One Skin Renewal System.</blockquote>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="hub" hidden>
+        <p class="panel-note">Affiliates needed more than customers did: pricing, launch gifts, the video, and downloadable product flyers they could share. The HUB post put all of it in one place, written so they could pick it up and use it that day. <a class="link" href="https://makewellnesshub.com/precision-skincare-is-here/" target="_blank" rel="noopener">Read the live post</a></p>
+        <div class="shots">
+          <figure class="shot"><img src="images/hub-post-top.jpg" loading="lazy" alt="HUB post opening: Precision Skincare is here, with a shop button and campaign photo"><figcaption>The opening ties the launch to the Summit preview affiliates already saw.</figcaption></figure>
+          <figure class="shot"><img src="images/hub-post-pricing.jpg" loading="lazy" alt="HUB post pricing panel with Stack price, subscribe price, and launch gifts"><figcaption>Pricing and launch gifts, laid out so affiliates can quote them accurately.</figcaption></figure>
         </div>
       </div>
-    </div>
 
-    <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="hub" hidden>
-      <p class="panel-note">Affiliates needed more than customers did: pricing, launch gifts, the video, and downloadable product flyers they could share. The HUB post put all of it in one place, written so they could pick it up and use it that day. <a class="text-link" href="https://makewellnesshub.com/precision-skincare-is-here/" target="_blank" rel="noopener">Read the live post &#8599;</a></p>
-      <div class="shots">
-        <figure class="shot"><img src="images/hub-post-top.jpg" loading="lazy" alt="HUB post opening: Precision Skincare is here, with a shop button and campaign photo"><figcaption>The opening ties the launch to the Summit preview affiliates already saw.</figcaption></figure>
-        <figure class="shot"><img src="images/hub-post-pricing.jpg" loading="lazy" alt="HUB post pricing panel with Stack price, subscribe price, and launch gifts"><figcaption>Pricing and launch gifts, laid out so affiliates can quote them accurately.</figcaption></figure>
+      <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="landing" hidden>
+        <p class="panel-note">The landing page is where new customers arrive cold. It leads with the category, then walks through the SPA Method&trade;, each product, and the science, with every claim footnoted and disclaimed. <a class="link" href="https://meet.makewellness.com/precision-skincare" target="_blank" rel="noopener">Visit the live page</a></p>
+        <div class="shots">
+          <figure class="shot"><img src="images/landing-hero.jpg" loading="lazy" alt="Landing page hero: Precision Skincare by MAKE Wellness, Get the Stack"><figcaption>The hero states what it is and who it's for before asking for anything.</figcaption></figure>
+          <figure class="shot"><img src="images/landing-spa-method.jpg" loading="lazy" alt="Landing page section: Powered by the SPA Method, Signal. Preserve. Amplify."><figcaption>The SPA Method&trade; carries through from the email and SMS word for word.</figcaption></figure>
+        </div>
       </div>
-    </div>
 
-    <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="landing" hidden>
-      <p class="panel-note">The landing page is where new customers arrive cold. It leads with the category, then walks through the SPA Method&trade;, each product, and the science, with every claim footnoted and disclaimed. <a class="text-link" href="https://meet.makewellness.com/precision-skincare" target="_blank" rel="noopener">Visit the live page &#8599;</a></p>
-      <div class="shots">
-        <figure class="shot"><img src="images/landing-hero.jpg" loading="lazy" alt="Landing page hero: Precision Skincare by MAKE Wellness, Get the Stack"><figcaption>The hero states what it is and who it's for before asking for anything.</figcaption></figure>
-        <figure class="shot"><img src="images/landing-spa-method.jpg" loading="lazy" alt="Landing page section: Powered by the SPA Method, Signal. Preserve. Amplify."><figcaption>The SPA Method&trade; carries through from the email and SMS word for word.</figcaption></figure>
-      </div>
-    </div>
-
-    <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="emails" hidden>
-      <p class="panel-note">Two sends bracketed launch week: one to introduce the line, and one to follow up when launch gifts started running out. Both are in the email library with full code.</p>
-      <div class="email-cards">
-        <a class="email-card" href="#email-work" data-open-tab="email:launch"><b>Launch day</b><span>Introduces the system, the SPA Method&trade;, and one line per product.</span></a>
-        <a class="email-card" href="#email-work" data-open-tab="email:running-low"><b>Launch follow-up</b><span>Honest urgency, built from real launch-gift inventory.</span></a>
+      <div class="tab-panel" role="tabpanel" data-group="kit" data-panel="emails" hidden>
+        <p class="panel-note">Two sends bracketed launch week: one to introduce the line, and one to follow up when launch gifts started running out. Both are in the email section with full code.</p>
+        <div class="email-cards">
+          <a class="email-card" href="#email-work" data-open-tab="email:launch"><b>Launch day</b><span>Introduces the system, the SPA Method&trade;, and one line per product.</span></a>
+          <a class="email-card" href="#email-work" data-open-tab="email:running-low"><b>Launch follow-up</b><span>Honest urgency, built from real launch-gift inventory.</span></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= GOVERNANCE ================= -->
-<section class="panel light-alt" id="governance">
+<section class="band blush" id="governance">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / Brand governance</p>
-      <h3 class="case-title">Keeping 50+ creators on brand and inside the claims.</h3>
-      <p class="campaign-intro">In supplements and skincare, one overpromising sentence can turn into a legal problem. Our compliance team keeps a deep library of claims guidance, but a library doesn't help an affiliate writing a caption at 9pm. So I built tools that bring the rules to where the writing happens.</p>
-    </div>
+    <h2 class="title">Keeping 50+ creators on brand and inside the claims.</h2>
+    <p class="lede">In supplements and skincare, one overpromising sentence can turn into a legal problem. Our compliance team keeps a deep library of claims guidance, but a library doesn't help an affiliate writing a caption at 9pm. So I built tools that bring the rules to where the writing happens.</p>
 
     <div class="gov-grid">
-      <div class="gov-card">
-        <h4>A claims checker that reads like compliance does.</h4>
+      <div class="gov-card feature">
+        <h3 class="sub">A claims checker that reads like compliance does.</h3>
         <p>I compiled our compliance documents into a ChatGPT project that reviews copy against them automatically. Paste in a caption, email, or flyer draft, and it flags risky language and suggests compliant rewrites. I run every send through it, and it backs up the claims framework our creators and affiliates follow.</p>
         <p style="margin:0;">The guidance itself stays internal. What's shareable is the result: copy that's safe before it ever reaches legal.</p>
       </div>
       <div class="gov-card">
-        <h4>One design standard for every send.</h4>
+        <h3 class="sub">One design standard for every send.</h3>
         <p>A single written reference covering layout, type, color, button construction, and the build rules that keep emails rendering in Gmail and Outlook. It's why ten sends a week still look like one brand. A few of the rules:</p>
         <ul class="rule-list">
-          <li><span>Type</span>Italic serif headlines, mono labels, sans body. Fallback fonts written inline on every element.</li>
+          <li><span>Type</span>Serif headlines, sans body, fallback fonts written inline on every element.</li>
           <li><span>Color</span>Neutral base. Green is an accent only, never a full background.</li>
           <li><span>Buttons</span>Pill-shaped, dark or light only, with an Outlook fallback so corners survive.</li>
           <li><span>Build</span>Every style inlined. Tables for layout. Letter-spacing in pixels.</li>
@@ -663,92 +479,74 @@
     </div>
 
     <div class="rewrite">
-      <div class="no"><h5>Before</h5><p>renewed reverses aging and clears up your skin in 4 weeks.</p></div>
-      <div class="yes"><h5>After</h5><p>renewed provides daily skin renewal support you sip, powered by Bioactive Precision Peptides&trade;.*</p></div>
+      <div class="no"><h4>Before</h4><p>renewed reverses aging and clears up your skin in 4 weeks.</p></div>
+      <div class="yes"><h4>After</h4><p>renewed provides daily skin renewal support you sip, powered by Bioactive Precision Peptides&trade;.*</p></div>
     </div>
     <p class="rewrite-cap">An illustrative rewrite, not a real incident. The "after" line is the approved copy from the launch email.</p>
   </div>
 </section>
 
 <!-- ================= PR ================= -->
-<section class="panel light" id="pr">
+<section class="band dark" id="pr">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / PR &amp; executive comms</p>
-      <h3 class="case-title">Speaking for the company, and for its founder.</h3>
-      <p class="campaign-intro">Outward-facing communication is where a young brand earns trust. Here's the press I secured, the founder voice I write in, the podcast I help steer, and a local partnership I proposed.</p>
-    </div>
-    <div class="comms-grid four">
-      <div class="comms-card">
-        <span class="comms-label">Press</span>
-        <h4>Pitching our own milestone.</h4>
-        <p>When the company crossed $100M in sales in its first year, I pitched Direct Selling News on the story and got it covered.</p>
-        <a class="comms-link" href="https://www.directsellingnews.com/2025/10/15/make-wellness-surpasses-100-million-in-sales-in-first-year/" target="_blank" rel="noopener">Read the feature &#8599;</a>
+    <h2 class="title">Speaking for the company, and for its founder.</h2>
+    <p class="lede">Outward-facing communication is where a young brand earns trust. Here's the press I secured, the founder voice I write in, the podcast I help steer, and a local partnership I proposed.</p>
+    <div class="pr-grid">
+      <div class="pr-item press">
+        <span class="kind">Press</span>
+        <h3>$100M in year one, and I got it into Direct Selling News.</h3>
+        <p>When the company crossed $100M in sales in its first year, I pitched the story and landed the feature.</p>
+        <a class="link" href="https://www.directsellingnews.com/2025/10/15/make-wellness-surpasses-100-million-in-sales-in-first-year/" target="_blank" rel="noopener">Read the feature</a>
       </div>
-      <div class="comms-card">
-        <span class="comms-label">Founder voice</span>
-        <h4>Writing as Justin Prince.</h4>
+      <div class="pr-item plain">
+        <span class="kind">Founder voice</span>
+        <h3>Writing as Justin Prince.</h3>
         <p>The MAKE 75 and F.I.T. Family challenges were Justin Prince's programs, so every guide, rule set, and announcement was written in his voice. When he announced the F.I.T. Family winners on camera, he held winner cards I designed.</p>
-        <a class="comms-link" href="#community">See the programs</a>
+        <a class="link" href="#community">See the programs</a>
       </div>
-      <div class="comms-card">
-        <span class="comms-label">Podcast</span>
-        <h4>Steering the conversation.</h4>
-        <p>For our series on peptide science and GLP-1 trends, I plan episode topics and handle everything outward-facing: positioning, promotion, and how each episode reaches our audience. Production is handled separately.</p>
-        <a class="comms-link" href="https://www.youtube.com/playlist?list=PL4VwAr8yUbYJXhACi5I95WzMvtYFUNYl3" target="_blank" rel="noopener">Watch the series &#8599;</a>
-      </div>
-      <div class="comms-card proposal">
-        <span class="status">Proposal, in progress</span>
-        <h4>Showing up in our own backyard.</h4>
-        <p>I proposed booths at local universities, starting with Utah Valley University, plus a sponsorship of UVU athletics. Established Utah wellness brands have built real loyalty through university partnerships, and I want MAKE competing for that same local attention.</p>
+      <div class="pr-item plain">
+        <span class="kind">Podcast</span>
+        <h3>Steering the conversation.</h3>
+        <p>For our series on peptide science and GLP-1 trends, I plan episode topics and handle everything outward-facing: positioning, promotion, and how each episode reaches our audience.</p>
+        <a class="link" href="https://www.youtube.com/playlist?list=PL4VwAr8yUbYJXhACi5I95WzMvtYFUNYl3" target="_blank" rel="noopener">Watch the series</a>
       </div>
     </div>
-    <p class="comms-footnote">I've also served as the sole photographer at multiple corporate outreach events. <a href="https://baileygowans.mypixieset.com/corporate/" target="_blank" rel="noopener">See the gallery &#8599;</a></p>
+    <div class="pr-item proposal" style="margin-top:20px;">
+      <span class="kind">Proposal, in progress</span>
+      <h3>Showing up in our own backyard.</h3>
+      <p>I proposed booths at local universities, starting with Utah Valley University, plus a sponsorship of UVU athletics. Established Utah wellness brands have built real loyalty through university partnerships, and I want MAKE competing for that same local attention.</p>
+    </div>
+    <p class="pr-foot">I've also served as the sole photographer at multiple corporate outreach events. <a class="link" href="https://baileygowans.mypixieset.com/corporate/" target="_blank" rel="noopener">See the gallery</a></p>
   </div>
 </section>
 
 <!-- ================= COMMUNITY ================= -->
-<section class="panel light-alt" id="community">
+<section class="band white" id="community">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / Community programs</p>
-      <h3 class="case-title">Programs people come back to every day.</h3>
-    </div>
+    <h2 class="title">Programs people come back to every day.</h2>
 
     <div class="program">
       <div class="two-col">
-        <div class="case-body">
-          <h4>The F.I.T. Family Challenge</h4>
+        <div class="prose">
+          <h3 class="sub">The F.I.T. Family Challenge</h3>
           <p>This was Justin Prince's challenge, and it took a while to get approved. Legal had a lot of notes. The goal: get families moving together and posting every day for eight weeks straight, not just for one giveaway post.</p>
-          <p>I built it around three simple daily actions: move together, fuel well, track it. I designed the full guide, a printable goal sheet, and a two-month tracking calendar, so people had something to stick on the fridge instead of just something to scroll past.</p>
+          <p>I built it around three simple daily actions: move together, fuel well, track it. I designed the full guide, a printable goal sheet, and a two-month tracking calendar, so people had something to stick on the fridge instead of something to scroll past.</p>
           <p class="big-stat">More than 10,000 people signed up.</p>
           <p>Weekly prize drawings kept it fun in the short term, and a running entry count built toward a grand prize trip, so people had a reason to keep showing up in week six, not just week one.</p>
-          <ul class="notes-list">
+          <ul class="ticks">
             <li>I designed the campaign mechanics and every creative asset: the guide, the tracker, the social rules, and the winner cards</li>
             <li>Ran across Instagram, Facebook, and our owned email and SMS lists</li>
           </ul>
-          <div class="cta-row" style="margin-top:28px; margin-bottom:0;">
-            <a class="btn ghost" href="fit-family-challenge.pdf" target="_blank" rel="noopener">View the full guide (PDF)</a>
+          <div class="cta-row" style="margin-top:30px;">
+            <a class="btn wine" href="fit-family-challenge.pdf" target="_blank" rel="noopener">View the full guide (PDF)</a>
           </div>
         </div>
         <div>
           <div class="timeline">
-            <div class="tl-item">
-              <p class="tl-date">Week 1</p>
-              <p class="tl-text"><b>Launch.</b> People comment to join and the guide starts going out.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">Every week</p>
-              <p class="tl-text"><b>Monday drawings.</b> A new winner picked each week to keep things fun.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">8 weeks</p>
-              <p class="tl-text"><b>Daily tracking.</b> The printable calendar keeps people going offline, not just posting.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">The finale</p>
-              <p class="tl-text"><b>Grand prize.</b> Justin Prince announces the winners on camera.</p>
-            </div>
+            <div class="tl-item"><p class="tl-date">Week 1</p><p class="tl-text"><b>Launch.</b> People comment to join and the guide starts going out.</p></div>
+            <div class="tl-item"><p class="tl-date">Every Monday</p><p class="tl-text"><b>Drawings.</b> A new winner picked each week to keep things fun.</p></div>
+            <div class="tl-item"><p class="tl-date">8 weeks</p><p class="tl-text"><b>Daily tracking.</b> The printable calendar keeps people going offline, not just posting.</p></div>
+            <div class="tl-item"><p class="tl-date">The finale</p><p class="tl-text"><b>Grand prize.</b> Justin Prince announces the winners on camera.</p></div>
           </div>
           <figure class="winner">
             <img src="images/winner-card-1.jpg" loading="lazy" alt="Winner card cover: F.I.T. Family Challenge, Winners">
@@ -761,66 +559,45 @@
 
     <div class="program">
       <div class="two-col">
-        <div class="case-body">
-          <h4>MAKE 75</h4>
+        <div class="prose">
+          <h3 class="sub">MAKE 75</h3>
           <p>MAKE 75 was Justin Prince's challenge for affiliates heading into year-end: one personal-growth habit and one business-growth habit, every day from September 23 to December 6.</p>
           <p>I wrote and designed the guide that turns his RISE Method and the MAKE Daily Method into a daily checklist, along with the key dates, check-in rules, and recognition moments that keep people going through day 75.</p>
-          <div class="cta-row" style="margin-top:28px; margin-bottom:0;">
-            <a class="btn ghost" href="make75-challenge-guide.pdf" target="_blank" rel="noopener">View the guide (PDF)</a>
+          <div class="cta-row" style="margin-top:30px;">
+            <a class="btn wine" href="make75-challenge-guide.pdf" target="_blank" rel="noopener">View the guide (PDF)</a>
           </div>
         </div>
-        <div>
-          <div class="timeline">
-            <div class="tl-item">
-              <p class="tl-date">September 23</p>
-              <p class="tl-text"><b>Challenge begins.</b> Daily check-ins in the private group.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">Every Monday</p>
-              <p class="tl-text"><b>Recognition.</b> Weekly giveaways and shout-outs on the Monday Night Call.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">December 5</p>
-              <p class="tl-text"><b>MAKE Day of Giving.</b> Affiliates serve in their local communities.</p>
-            </div>
-            <div class="tl-item">
-              <p class="tl-date">December 7</p>
-              <p class="tl-text"><b>Finale.</b> Final recognition and grand-prize announcements.</p>
-            </div>
-          </div>
+        <div class="timeline">
+          <div class="tl-item"><p class="tl-date">September 23</p><p class="tl-text"><b>Challenge begins.</b> Daily check-ins in the private group.</p></div>
+          <div class="tl-item"><p class="tl-date">Every Monday</p><p class="tl-text"><b>Recognition.</b> Weekly giveaways and shout-outs on the Monday Night Call.</p></div>
+          <div class="tl-item"><p class="tl-date">December 5</p><p class="tl-text"><b>MAKE Day of Giving.</b> Affiliates serve in their local communities.</p></div>
+          <div class="tl-item"><p class="tl-date">December 7</p><p class="tl-text"><b>Finale.</b> Final recognition and grand-prize announcements.</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= EMAIL LIBRARY ================= -->
-<section class="panel light" id="email-work">
+<!-- ================= EMAILS ================= -->
+<section class="band blush" id="email-work">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / Email</p>
-      <h3 class="case-title">A look at how I actually build these.</h3>
-      <p class="campaign-intro">Every send is hand-coded to the same standard, then tuned on opens, clicks, and what the audience responds to. Pick an email to see the real design and the real code.</p>
-    </div>
+    <h2 class="title">Emails, down to the code.</h2>
+    <p class="lede">Every send is hand-coded to the same standard, then tuned on opens, clicks, and what the audience responds to. Pick one to see the real design and the real code.</p>
 
     <div class="tab-row" role="tablist" aria-label="Emails">
-      <button class="tab-btn active" role="tab" aria-selected="true" data-group="email" data-target="launch">Launch &middot; Precision Skincare</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="running-low">Urgency &middot; Gifts running low</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="stack">Retention &middot; Muscle Support Stack</button>
-      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="revolution">Education &middot; Wellness Revolution</button>
+      <button class="tab-btn active" role="tab" aria-selected="true" data-group="email" data-target="launch">Launch day</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="running-low">Gifts running low</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="stack">Muscle Support Stack</button>
+      <button class="tab-btn" role="tab" aria-selected="false" data-group="email" data-target="revolution">Wellness Revolution</button>
     </div>
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="launch" data-src="emails/precision-skincare-launch.html">
       <div class="two-col">
-        <div class="case-body">
-          <div class="meta-chip-row">
-            <span class="meta-chip">Audience: Subscribers</span>
-            <span class="meta-chip">Goal: Launch</span>
-            <span class="meta-chip">Channel: Email + SMS</span>
-          </div>
+        <div class="prose">
+          <p class="meta">For subscribers. Goal: launch. Email and SMS.</p>
           <p>The launch email had one job: introduce a brand-new category without overwhelming anyone. It opens with the system, explains the SPA Method&trade; in three words, then gives each product exactly one line.</p>
           <p>The animated product GIF doubled as the launch-day SMS creative, so the two channels felt like one moment instead of two separate asks.</p>
-          <ul class="notes-list">
+          <ul class="ticks">
             <li>I wrote the copy from R&amp;D's materials and built the HTML</li>
             <li>Sent at 10am MT, alongside SMS, the HUB post, and the landing page</li>
           </ul>
@@ -831,15 +608,11 @@
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="running-low" data-src="emails/precision-skincare-running-low.html" hidden>
       <div class="two-col">
-        <div class="case-body">
-          <div class="meta-chip-row">
-            <span class="meta-chip">Audience: Subscribers</span>
-            <span class="meta-chip">Goal: Urgency</span>
-            <span class="meta-chip">Channel: Email</span>
-          </div>
+        <div class="prose">
+          <p class="meta">For subscribers. Goal: honest urgency.</p>
           <p>Once launch gifts started moving, I wanted urgency that was real. The headline and progress bar reflect actual inventory, and the email says plainly that the Stack stays available after the gifts run out.</p>
           <p>Honest urgency builds trust for the next launch. Invented scarcity burns it.</p>
-          <ul class="notes-list">
+          <ul class="ticks">
             <li>The progress bar is built from table cells, so it renders in Outlook too</li>
             <li>Short by design: one number, one image, one button</li>
           </ul>
@@ -850,15 +623,11 @@
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="stack" data-src="emails/muscle-support-stack.html" hidden>
       <div class="two-col">
-        <div class="case-body">
-          <div class="meta-chip-row">
-            <span class="meta-chip">Audience: Customers</span>
-            <span class="meta-chip">Goal: Retention</span>
-            <span class="meta-chip">Channel: Email</span>
-          </div>
+        <div class="prose">
+          <p class="meta">For customers. Goal: retention.</p>
           <p>Most post-purchase emails keep talking about the goal a customer already hit, instead of what happens next. For this one, I wanted to shift the tone completely: less "start here," more "protect what you've built."</p>
-          <p>So I leaned into a moodier, editorial look. Muted forest greens, an italic serif headline, a lot more restraint than the bright, high-energy style most supplement brands default to.</p>
-          <ul class="notes-list">
+          <p>So I leaned into a moodier, editorial look with a lot more restraint than the bright, high-energy style most supplement brands default to.</p>
+          <ul class="ticks">
             <li>I handled the creative direction, the copy, and the HTML build myself</li>
             <li>It became the reference template for the rest of the retention series</li>
           </ul>
@@ -869,15 +638,11 @@
 
     <div class="tab-panel" role="tabpanel" data-group="email" data-panel="revolution" data-src="emails/wellness-revolution.html" hidden>
       <div class="two-col">
-        <div class="case-body">
-          <div class="meta-chip-row">
-            <span class="meta-chip">Audience: Customers</span>
-            <span class="meta-chip">Goal: Education</span>
-            <span class="meta-chip">Channel: Email + Video</span>
-          </div>
+        <div class="prose">
+          <p class="meta">For customers. Goal: education. Email and video.</p>
           <p>This one sits higher up the funnel. Instead of pushing a product, it's built around a bigger idea: muscle matters more for healthy aging than most people think, not just weight loss.</p>
           <p>I built it around a short doctor interview instead of product photography, since the goal was to get people thinking differently before asking them to buy anything.</p>
-          <ul class="notes-list">
+          <ul class="ticks">
             <li>I wrote the concept and the copy, and built the template</li>
             <li>Paired with a real interview instead of a straight product pitch</li>
           </ul>
@@ -889,71 +654,64 @@
 </section>
 
 <!-- ================= SYSTEMS ================= -->
-<section class="panel dark" id="systems">
+<section class="band deep" id="systems">
   <div class="wrap">
-    <div class="case-head">
-      <p class="eyebrow">Case study / Systems &amp; AI</p>
-      <h3 class="case-title">Retired the drag-and-drop builder. Taught the team a better way.</h3>
-    </div>
+    <h2 class="title">Retired the drag-and-drop builder. Taught the team a better way.</h2>
     <div class="two-col">
-      <div class="case-body">
-        <p>When I started, emails came out of a drag-and-drop tool and SMS ran on an older platform. Every send looked a little different, and each one took too long to build. I rebuilt the tooling and the workflow:</p>
-        <ul class="notes-list">
+      <div class="prose">
+        <p>When I started, emails came out of a drag-and-drop tool and SMS ran on an older platform. Every send looked a little different, and each one took too long to build. I rebuilt the tooling and the workflow.</p>
+        <ul class="ticks">
           <li>Moved SMS and email from Ziplingo to Attentive, rebuilding segmentation and automations from scratch</li>
           <li>Took the team from drag-and-drop templates to hand-coded HTML, built on one shared design standard</li>
           <li>Trained the team to use Claude and ChatGPT for template builds, link checks across US and Canada campaigns, and claims review</li>
-          <li><b>The result:</b> 10+ sends in a work week, across campaigns, updates, and automated flows, at the same quality every time</li>
+          <li><b>The result: 10+ sends in a work week</b>, across campaigns, updates, and automated flows, at the same quality every time</li>
           <li>Built a dashboard that pulls campaign data into one leadership-ready report, replacing a manual monthly build</li>
         </ul>
-        <div class="chip-row">
-          <span class="chip">Claude</span>
-          <span class="chip">ChatGPT</span>
-          <span class="chip">Attentive</span>
-          <span class="chip">Klaviyo</span>
-          <span class="chip">Hand-coded HTML/CSS</span>
+        <div class="tools">
+          <span>Attentive</span><span>Klaviyo</span><span>Claude</span><span>ChatGPT</span><span>HTML and CSS</span>
         </div>
       </div>
       <div>
         <div class="compare">
           <figure>
-            <figcaption><b>Before</b> / builder template</figcaption>
+            <figcaption>Before <span>builder template</span></figcaption>
             <div class="frame"><iframe src="emails/before-builder-template.html" loading="lazy" title="Before: drag-and-drop builder email"></iframe></div>
           </figure>
           <figure>
-            <figcaption><b>After</b> / hand-coded system</figcaption>
+            <figcaption>After <span>hand-coded</span></figcaption>
             <div class="frame"><iframe src="emails/precision-skincare-launch.html" loading="lazy" title="After: hand-coded launch email"></iframe></div>
           </figure>
         </div>
-        <p class="compare-note">Both shown at phone width. Scroll inside each to see the full email.</p>
+        <p class="compare-note">Both shown at phone width. Scroll inside each one to see the full email.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="panel light" id="skills">
+<section class="band white" id="skills">
   <div class="wrap">
-    <h2 class="section-heading">Skills &amp; tools</h2>
-    <div class="skills-grid" style="margin-top:36px;">
+    <h2 class="title">What I bring.</h2>
+    <div class="skills-grid">
       <div class="skill-col">
-        <h4>Communications &amp; Creative</h4>
+        <h3>Communications and creative</h3>
         <ul>
-          <li>Launch planning &amp; messaging</li>
-          <li>Media relations &amp; PR</li>
-          <li>Executive &amp; founder communications</li>
-          <li>Lifecycle strategy (email + SMS)</li>
-          <li>Brand voice &amp; claims compliance</li>
-          <li>Copywriting &amp; localization (Spanish, French)</li>
+          <li>Launch planning and messaging</li>
+          <li>Media relations and PR</li>
+          <li>Executive and founder communications</li>
+          <li>Lifecycle strategy (email and SMS)</li>
+          <li>Brand voice and claims compliance</li>
+          <li>Copywriting and localization (Spanish, French)</li>
         </ul>
       </div>
       <div class="skill-col">
-        <h4>Technical &amp; Systems</h4>
+        <h3>Technical and systems</h3>
         <ul>
           <li>AI-assisted workflows (Claude, ChatGPT)</li>
-          <li>Hand-coded HTML/CSS email development</li>
-          <li>Attentive &amp; Klaviyo platform architecture</li>
-          <li>Custom reporting &amp; dashboard builds</li>
-          <li>Print &amp; PDF design</li>
-          <li>WordPress, Webflow &amp; Shopify</li>
+          <li>Hand-coded HTML and CSS email</li>
+          <li>Attentive and Klaviyo platform architecture</li>
+          <li>Custom reporting and dashboards</li>
+          <li>Print and PDF design</li>
+          <li>WordPress, Webflow, and Shopify</li>
         </ul>
       </div>
     </div>
@@ -962,16 +720,16 @@
 
 <footer class="site" id="contact">
   <div class="wrap">
-    <p class="foot-head">Want to talk shop? Reach out.</p>
-    <div class="foot-row">
-      <a class="btn primary" href="mailto:gowansba@gmail.com">Email me</a>
-      <a class="btn ghost" href="resume.pdf" download>Download resume</a>
-      <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn ghost" href="https://baileygowans.mypixieset.com" target="_blank" rel="noopener">Photography</a>
+    <h2>Let's talk.</h2>
+    <div class="cta-row">
+      <a class="btn wine" href="mailto:gowansba@gmail.com">Email me</a>
+      <a class="btn line" href="resume.pdf" download>Download resume</a>
+      <a class="btn line" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn line" href="https://baileygowans.mypixieset.com" target="_blank" rel="noopener">Photography</a>
     </div>
     <div class="foot-meta">
-      <span>Bailey Gowans, Utah</span>
-      <span>Built by hand, with a little help from Claude</span>
+      <span>Bailey Gowans</span>
+      <span>Spanish Fork, Utah</span>
     </div>
   </div>
 </footer>
@@ -980,40 +738,13 @@
   <div class="view-toggle">
     <button class="view-btn active" type="button" data-view="preview">Preview</button>
     <button class="view-btn" type="button" data-view="code">Code</button>
-    <a class="view-link" target="_blank" rel="noopener">Open full email &#8599;</a>
+    <a class="link" target="_blank" rel="noopener">Open full email</a>
   </div>
   <div class="email-frame-wrap"><iframe class="email-frame" title="Email preview"></iframe></div>
   <pre class="code-view" style="display:none;"><code></code></pre>
 </template>
 
 <script>
-  /* ---------- Terminal ---------- */
-  const lines = [
-    "$ checking launch copy against claims guide...",
-    "  ✓ flagged phrases rewritten",
-    "$ verifying shop links (US, CA) across this week's sends...",
-    "  ✓ all links resolve",
-    "$ building: launch, follow-up, HUB digest, flows",
-    "$ ready for review"
-  ];
-  const body = document.getElementById('terminal-body');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function lineHtml(l, n){ const t = n === undefined ? l : l.slice(0, n); return l.startsWith('$') ? '<span class="prompt">' + t + '</span>' : t; }
-  if (reduceMotion) {
-    body.innerHTML = lines.map(l => '<div class="line" style="opacity:1;">' + lineHtml(l) + '</div>').join('') + '<span class="cursor"></span>';
-  } else {
-    let i = 0;
-    (function typeNext(){
-      if (i >= lines.length){ const c = document.createElement('span'); c.className = 'cursor'; body.appendChild(c); return; }
-      const div = document.createElement('div'); div.className = 'line'; div.style.opacity = '1'; body.appendChild(div);
-      const raw = lines[i], prompt = raw.startsWith('$'); let n = 0;
-      const iv = setInterval(() => {
-        div.innerHTML = lineHtml(raw, ++n);
-        if (n >= raw.length){ clearInterval(iv); i++; setTimeout(typeNext, prompt ? 260 : 160); }
-      }, prompt ? 22 : 10);
-    })();
-  }
-
   /* ---------- Case studies dropdown ---------- */
   const ddToggle = document.querySelector('.dd-toggle');
   const ddMenu = document.getElementById('case-menu');
@@ -1040,8 +771,8 @@
     const code = slot.querySelector('code');
     const pre = slot.querySelector('pre');
     const wrap = slot.querySelector('.email-frame-wrap');
-    slot.querySelector('.view-link').href = src;
-    frame.title = panel.querySelector('.meta-chip-row') ? 'Email preview: ' + src.split('/').pop() : 'Email preview';
+    slot.querySelector('.view-toggle .link').href = src;
+    frame.title = 'Email preview: ' + src.split('/').pop();
     fetch(src).then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }).then(html => {
       code.textContent = html;
       frame.srcdoc = html.replace(/\{\{companyAddress\}\}/g, ADDRESS);
